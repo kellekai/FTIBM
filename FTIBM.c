@@ -64,7 +64,7 @@ int main(int argc, char *argv[]) {
         MPI_Abort(gcomm, -1);
     }
 
-    ierr = MPI_File_write_at(pfh, SIZE*rank, arr, SIZE, MPI_DOUBLE, &status);
+    ierr = MPI_File_write_at(pfh, SIZE*rank, arr, SIZE, MPI_CHAR, &status);
     
     if (ierr!=0) {
         perr = errno;
@@ -124,7 +124,7 @@ int main(int argc, char *argv[]) {
     long written = 0;
     char *ptr = (char*) arr;
     while(written < SIZE) {
-        written += fwrite(ptr, sizeof(double), SIZE - written, fd);
+        written += fwrite(ptr, sizeof(char), SIZE - written, fd);
     
         if (written == 0) {
             perr = errno;
@@ -138,10 +138,10 @@ int main(int argc, char *argv[]) {
 #endif
             MPI_Abort(gcomm, -1);
         } else if (written < SIZE) { 
-            printf("%lu Bytes of %lu Bytes written...", written*sizeof(double), SIZE*sizeof(double));
+            printf("%lu Bytes of %lu Bytes written...", written, SIZE);
         }
 
-        ptr += written*sizeof(double); 
+        ptr += written; 
     }
 
     fclose(fd); 
