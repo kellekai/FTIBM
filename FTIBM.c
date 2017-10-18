@@ -185,13 +185,19 @@ int main(int argc, char *argv[]) {
             MPI_Abort(gcomm, -1);
         }
     }
-
+    MPI_Barrier(gcomm);
     for(i=1; i<5; i++) {
         if (rank == 0) {
+            ini = iniparser_load(config_file);
+            if (ini == NULL) {
+                printf("[ERROR] can't open configuration file.\n");
+                MPI_Abort(gcomm, -1);
+            }
             fd = fopen(config_file, "w");
             iniparser_set(ini, "Basic:keep_last_ckpt", "1");
             iniparser_dump_ini(ini, fd);
             fclose(fd);
+            iniparser_freedict(ini);
         }
         gcomm = MPI_COMM_WORLD;
         MPI_Barrier(gcomm);
@@ -199,9 +205,8 @@ int main(int argc, char *argv[]) {
             printf("FTI: failed to initialize.\n");
             MPI_Abort(MPI_COMM_WORLD, -1);
         }
-        FTI_InitType(&CHAR_TYPE, 1);
         gcomm = FTI_COMM_WORLD;
-        FTI_Protect(0, arr, SIZE, CHAR_TYPE);
+        FTI_Protect(0, arr, SIZE, FTI_CHAR);
         if (rank == 0) {
             printf("FTI: Perform level %i Checkpoint.\n", i);
         }
@@ -213,11 +218,17 @@ int main(int argc, char *argv[]) {
         }
         FTI_Finalize();
         if (rank == 0) {
-            printf("FTI: Recovering checkpoint from level %i.\n", i);
+            ini = iniparser_load(config_file);
+            if (ini == NULL) {
+                printf("[ERROR] can't open configuration file.\n");
+                MPI_Abort(gcomm, -1);
+            }
             fd = fopen(config_file, "w");
             iniparser_set(ini, "Basic:keep_last_ckpt", "0");
             iniparser_dump_ini(ini, fd);
             fclose(fd);
+            iniparser_freedict(ini);
+            printf("FTI: Recover from level %i.\n", i);
         }
         MPI_Barrier(gcomm);
         gcomm = MPI_COMM_WORLD;
@@ -228,9 +239,8 @@ int main(int argc, char *argv[]) {
             MPI_Abort(MPI_COMM_WORLD, -1);
         }
         gcomm = FTI_COMM_WORLD;
-        FTI_InitType(&CHAR_TYPE, 1);
-        FTI_Protect(0, arr, SIZE, CHAR_TYPE);
-        //FTI_Recover();
+        FTI_Protect(0, arr, SIZE, FTI_CHAR);
+        FTI_Recover();
         end = MPI_Wtime();
         if (rank == 0) {
             printf("FTI: Recovery from level %i Checkpoint took: %lf seconds!.\n", i, end-start);
@@ -240,7 +250,6 @@ int main(int argc, char *argv[]) {
     }
 
     if (rank == 0){
-        iniparser_freedict(ini);
     }
     
     remove(config_file);
