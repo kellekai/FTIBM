@@ -2,6 +2,8 @@
 
 int main(int argc, char *argv[]) {
     
+    int i;
+    
     striping_factor = (argc > 1) ? atoi(argv[1]) : -1;
 
     MPI_Init(NULL,NULL);
@@ -170,24 +172,38 @@ int main(int argc, char *argv[]) {
  
 /* INITIALIZE FTI */
     
-    if (rank == 0) {
-    printf("FTI: Initializing...\n");
-    }
-    if (FTI_Init(config_file, gcomm) != FTI_SCES) {
-        printf("FTI: failed to initialize.\n");
-        MPI_Abort(MPI_COMM_WORLD, -1);
-    }
-    if (rank == 0) {
-    printf("FTI: Initialization successful.\n");
-    }
-    gcomm = FTI_COMM_WORLD;
-    
-    FTI_Protect(0, arr, SIZE, FTI_CHAR);
 
-    int i;
+/* DO CHECKPOINT AND RESTART FOR ALL LEVELS */
+
+    dictionary *ini;
+    FTIT_type CHAR_TYPE;
+
+    if (rank == 0) {
+        ini = iniparser_load(config_file);
+        if (ini == NULL) {
+            printf("[ERROR] can't open configuration file.\n");
+            MPI_Abort(gcomm, -1);
+        }
+    }
+
     for(i=1; i<5; i++) {
         if (rank == 0) {
-            printf("FTI: Level %i Checkpoint.\n", i);
+            fd = fopen(config_file, "w");
+            iniparser_set(ini, "Basic:keep_last_ckpt", "1");
+            iniparser_dump_ini(ini, fd);
+            fclose(fd);
+        }
+        gcomm = MPI_COMM_WORLD;
+        MPI_Barrier(gcomm);
+        if (FTI_Init(config_file, gcomm) != FTI_SCES) {
+            printf("FTI: failed to initialize.\n");
+            MPI_Abort(MPI_COMM_WORLD, -1);
+        }
+        FTI_InitType(&CHAR_TYPE, 1);
+        gcomm = FTI_COMM_WORLD;
+        FTI_Protect(0, arr, SIZE, CHAR_TYPE);
+        if (rank == 0) {
+            printf("FTI: Perform level %i Checkpoint.\n", i);
         }
         start = MPI_Wtime();
         FTI_Checkpoint(i,i);
@@ -195,12 +211,42 @@ int main(int argc, char *argv[]) {
         if (rank == 0) {
             printf("FTI: Level %i Checkpoint took: %lf seconds!.\n", i, end-start);
         }
+        FTI_Finalize();
+        if (rank == 0) {
+            printf("FTI: Recovering checkpoint from level %i.\n", i);
+            fd = fopen(config_file, "w");
+            iniparser_set(ini, "Basic:keep_last_ckpt", "0");
+            iniparser_dump_ini(ini, fd);
+            fclose(fd);
+        }
+        MPI_Barrier(gcomm);
+        gcomm = MPI_COMM_WORLD;
+        MPI_Barrier(gcomm);
+        start = MPI_Wtime();
+        if (FTI_Init(config_file, gcomm) != FTI_SCES) {
+            printf("FTI: failed to initialize.\n");
+            MPI_Abort(MPI_COMM_WORLD, -1);
+        }
+        gcomm = FTI_COMM_WORLD;
+        FTI_InitType(&CHAR_TYPE, 1);
+        FTI_Protect(0, arr, SIZE, CHAR_TYPE);
+        //FTI_Recover();
+        end = MPI_Wtime();
+        if (rank == 0) {
+            printf("FTI: Recovery from level %i Checkpoint took: %lf seconds!.\n", i, end-start);
+        }
+        FTI_Finalize();
+        sleep(1);
     }
 
-    FTI_Finalize();
-    MPI_Finalize();
-
+    if (rank == 0){
+        iniparser_freedict(ini);
+    }
+    
     remove(config_file);
+    
+    MPI_Finalize();
+    
     return 0;
 }
 

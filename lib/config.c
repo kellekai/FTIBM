@@ -27,7 +27,7 @@ void init_config_file(const char *config_file)
             "group_size                  = %i\n"
             "max_sync_intv               = %i\n"
             "ckpt_io                     = 1\n"
-            "verbosity                   = 2\n"
+            "verbosity                   = 3\n"
             "[ Restart ]\n"
             "failure                     = 0\n"
             "exec_id                     = NULL\n"
