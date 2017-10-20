@@ -10,15 +10,40 @@ int main(int argc, char *argv[]) {
     MPI_Comm_rank(MPI_COMM_WORLD,&rank);
     MPI_Comm_size(MPI_COMM_WORLD,&size);    
     arr = (char*) malloc(SIZE);
-    
     gcomm = MPI_COMM_WORLD;
     
     if (rank == 0) {
         init_config_file(config_file);
     }
+    
     MPI_Barrier(gcomm);
 
     parse_arguments(argc, argv);
+
+    if (rank == 0) {
+        printf("\n"
+               "#######################\n"
+               "##   CONFIGURATION   ##\n"
+               "#######################\n"
+               "\n"
+               "Number of processes: %i\n"
+               "Allocated memory per process: \n%llu B | %lf MB | %lf GB\n"
+               "Allocated memory in total: \n%llu B | %lf MB | %lf GB\n"
+               "\n"
+               "#######################\n"
+               "##     START TEST    ##\n"
+               "#######################\n"
+               "\n",
+               size,
+               SIZE,
+               (SIZE*1.0)/(1024*1024),
+               (SIZE*1.0)/(1024*1024*1024),
+               SIZE*size,
+               (SIZE*1.0*size)/(1024*1024),
+               (SIZE*1.0*size)/(1024*1024*1024));
+    } 
+
+    MPI_Barrier(gcomm);
 
 // +-----------------------------------------------------------------------------+
 
