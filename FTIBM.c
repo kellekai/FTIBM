@@ -336,18 +336,18 @@ int main(int argc, char *argv[]) {
     }
     MPI_Barrier(gcomm);
     for(i=1; i<5; i++) {
-        if (rank == 0) {
-            ini = iniparser_load(config_file);
-            if (ini == NULL) {
-                printf("[ERROR] can't open configuration file.\n");
-                MPI_Abort(gcomm, -1);
-            }
-            fd = fopen(config_file, "w");
-            iniparser_set(ini, "Basic:keep_last_ckpt", "1");
-            iniparser_dump_ini(ini, fd);
-            fclose(fd);
-            iniparser_freedict(ini);
-        }
+        //if (rank == 0) {
+        //    ini = iniparser_load(config_file);
+        //    if (ini == NULL) {
+        //        printf("[ERROR] can't open configuration file.\n");
+        //        MPI_Abort(gcomm, -1);
+        //    }
+        //    fd = fopen(config_file, "w");
+        //    iniparser_set(ini, "Basic:keep_last_ckpt", "1");
+        //    iniparser_dump_ini(ini, fd);
+        //    fclose(fd);
+        //    iniparser_freedict(ini);
+        //}
         gcomm = MPI_COMM_WORLD;
         MPI_Barrier(gcomm);
         if (FTI_Init(config_file, gcomm) != FTI_SCES) {
@@ -365,20 +365,20 @@ int main(int argc, char *argv[]) {
         if (rank == 0) {
             printf("FTI: Level %i Checkpoint took: %lf seconds!.\n", i, end-start);
         }
-        FTI_Finalize();
-        if (rank == 0) {
-            ini = iniparser_load(config_file);
-            if (ini == NULL) {
-                printf("[ERROR] can't open configuration file.\n");
-                MPI_Abort(gcomm, -1);
-            }
-            fd = fopen(config_file, "w");
-            iniparser_set(ini, "Basic:keep_last_ckpt", "0");
-            iniparser_dump_ini(ini, fd);
-            fclose(fd);
-            iniparser_freedict(ini);
-            printf("FTI: Recover from level %i.\n", i);
-        }
+        //FTI_Finalize();
+        //if (rank == 0) {
+        //    ini = iniparser_load(config_file);
+        //    if (ini == NULL) {
+        //        printf("[ERROR] can't open configuration file.\n");
+        //        MPI_Abort(gcomm, -1);
+        //    }
+        //    fd = fopen(config_file, "w");
+        //    iniparser_set(ini, "Basic:keep_last_ckpt", "0");
+        //    iniparser_dump_ini(ini, fd);
+        //    fclose(fd);
+        //    iniparser_freedict(ini);
+        //    printf("FTI: Recover from level %i.\n", i);
+        //}
         MPI_Barrier(gcomm);
         gcomm = MPI_COMM_WORLD;
         MPI_Barrier(gcomm);
@@ -429,7 +429,7 @@ void parse_arguments(int argc, char *argv[]) {
         }
     }
 
-    while ((oc = getopt(argc, argv, ":ln:u:f:d:m:M:")) != -1) {
+    while ((oc = getopt(argc, argv, ":ln:g:u:f:d:m:M:")) != -1) {
         switch (oc) {
             case 'm':
                 /* mem-size in bytes */
@@ -446,7 +446,7 @@ void parse_arguments(int argc, char *argv[]) {
                 }
                 break;
             case 'd':
-                /* local test */
+                /* local directory */
                 if (rank == 0) {
                     iniparser_set(ini, "Basic:ckpt_dir", optarg);
                     printf("[CONFIG] FTI: ckpt_dir is set to '%s'\n", optarg);
@@ -459,12 +459,20 @@ void parse_arguments(int argc, char *argv[]) {
                     printf("[CONFIG] FTI: local_test is set to 1\n");
                 }
                 break;
+            case 'g':
+                /* group size */
+                FTI_GROUP_SIZE = atoi(optarg);
+                if (rank == 0) {
+                    iniparser_set(ini, "Basic:group_size", optarg);
+                    printf("[CONFIG] FTI: group_size is set to %i\n", atoi(optarg));
+                }
+                break;
             case 'n':
                 /* cpus per node */
                 FTI_CPU_PER_NODE = atoi(optarg);
                 if (rank == 0) {
                     iniparser_set(ini, "Basic:node_size", optarg);
-                    printf("[CONFIG] FTI: CPUs per node is set to %i\n", atoi(optarg));
+                    printf("[CONFIG] FTI: node_size is set to %i\n", atoi(optarg));
                 }
                 break;
             case 'u':
