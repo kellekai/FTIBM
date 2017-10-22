@@ -30,6 +30,8 @@ char FTI_LOCAL_DIR[256], FTI_GLOBAL_DIR[256], FTI_META_DIR[256];
 int FTI_CPU_PER_NODE, FTI_GROUP_SIZE, FTI_MAX_SYNC_ITER, FTI_LOCAL_TEST;
 long L_SU;
 double start, end;
+double dTPosixRead, dTPosixWrite, dTMpiRead, dTMpiWrite; 
+double dTFtiRead[4], dTFtiWrite[4];
 char *arr;
 FILE *fd;
 char tmpdir[10];

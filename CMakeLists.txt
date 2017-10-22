@@ -5,6 +5,22 @@ set(FTI_PATH "" CACHE STRING "Path to FTI")
 if (FTI_PATH STREQUAL "")
     set(FTI_PATH "/usr/local")
 endif()
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/CMakeScripts")
+if(ENABLE_LUSTRE)
+    find_package(LUSTREAPI)
+    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DFTI_LUSTRE")
+    if(LUSTREAPI_FOUND)
+        include_directories(${LUSTREAPI_INCLUDE_DIRS})
+        target_link_libraries(FTIBM ${LUSTREAPI_LIBRARIES})
+    else()
+        message(WARNING "
+  ** Lustre could not be found!
+  *  You may specify:
+  *  -DLUSTREAPI_CMAKE_LIBRARY_DIRS:PATH=<path to liblustreapi.a>
+  *  and
+  *  -DLUSTREAPI_CMAKE_INCLUDE_DIRS:PATH=<path to liblustreapi.h>")
+    endif()
+endif()
 set(FTI_LIBRARIES "-Wl,-rpath,${FTI_PATH}/lib ${FTI_PATH}/lib/libfti.so")
 set(LIB_SRC ${CMAKE_SOURCE_DIR}/lib/FTIBM_defs.c ${CMAKE_SOURCE_DIR}/lib/config.c ${CMAKE_SOURCE_DIR}/lib/iniparser/iniparser.c ${CMAKE_SOURCE_DIR}/lib/iniparser/dictionary.c)
 add_library(FTIBMlib STATIC ${LIB_SRC})

@@ -3,8 +3,6 @@
 int main(int argc, char *argv[]) {
     
     int i;
-    
-    striping_factor = (argc > 1) ? atoi(argv[1]) : -1;
 
     MPI_Init(NULL,NULL);
     MPI_Comm_rank(MPI_COMM_WORLD,&rank);
@@ -112,13 +110,15 @@ int main(int argc, char *argv[]) {
 
     MPI_File_close(&pfh);
     end = MPI_Wtime();
+    
+    dTMpiWrite = end-start;
 
 /* END  WRITE */
     
     MPI_Barrier(gcomm);
     
     if(rank == 0) {
-        printf("MPIIO: finished write in %lf seconds!\n", end-start);
+        printf("MPIIO: finished write in %lf seconds!\n", dTMpiWrite);
     }
     
     if(rank == 0) {
@@ -156,11 +156,13 @@ int main(int argc, char *argv[]) {
 
     MPI_File_close(&pfh);
     end = MPI_Wtime();
+    
+    dTMpiRead = end-start;
 
 /* END  WRITE */
     
     if(rank == 0) {
-        printf("MPIIO: finished read in %lf seconds!\n", end-start);
+        printf("MPIIO: finished read in %lf seconds!\n", dTMpiRead);
         remove(tempfile);
         rmdir(tmpdir);
     }
@@ -240,10 +242,12 @@ int main(int argc, char *argv[]) {
     MPI_Barrier(gcomm);    
     end = MPI_Wtime();
 
+    dTPosixWrite = end-start;
+
 /* END WRITE */
 
     if(rank == 0) {
-        printf("POSIX: finished write in %lf seconds!\n", end-start);
+        printf("POSIX: finished write in %lf seconds!\n", dTPosixWrite);
         printf("POSIX: start reading from file\n");
     }
     
@@ -292,6 +296,8 @@ int main(int argc, char *argv[]) {
     MPI_Barrier(gcomm);    
     end = MPI_Wtime();
 
+    dTPosixRead = end-start;
+
 /* END READ */
 
 #ifdef FTI_LUSTRE
@@ -305,7 +311,7 @@ int main(int argc, char *argv[]) {
     MPI_Barrier(gcomm);    
 
     if(rank == 0) {
-        printf("POSIX: finished read in %lf seconds!\n", end-start);
+        printf("POSIX: finished read in %lf seconds!\n", dTPosixRead);
         rmdir(tmpdir);
 #ifdef FTI_LUSTRE
         free(lum_file);
@@ -362,8 +368,9 @@ int main(int argc, char *argv[]) {
         start = MPI_Wtime();
         FTI_Checkpoint(i,i);
         end = MPI_Wtime();
+        dTFtiWrite[i-1] = end-start;
         if (rank == 0) {
-            printf("FTI: Level %i Checkpoint took: %lf seconds!.\n", i, end-start);
+            printf("FTI: Level %i Checkpoint took: %lf seconds!.\n", i, dTFtiWrite[i-1]);
         }
         //FTI_Finalize();
         //if (rank == 0) {
@@ -391,8 +398,9 @@ int main(int argc, char *argv[]) {
         FTI_Protect(0, arr, SIZE, FTI_CHAR);
         FTI_Recover();
         end = MPI_Wtime();
+        dTFtiRead[i-1] = end-start;
         if (rank == 0) {
-            printf("FTI: Recovery from level %i Checkpoint took: %lf seconds!.\n", i, end-start);
+            printf("FTI: Recovery from level %i Checkpoint took: %lf seconds!.\n", i, dTFtiRead[i-1]);
         }
         FTI_Finalize();
         sleep(1);
@@ -406,6 +414,45 @@ int main(int argc, char *argv[]) {
 
 // +-----------------------------------------------------------------------------+
     
+    if (rank == 0) {
+        printf("\n"
+               "#######################\n"
+               "##   RESULTS         ##\n"
+               "#######################\n"
+               "\n"
+               "FTI\n"
+               "-----------------------\n"
+               " L1 Write = %lf s\n"
+               " L1 Read  = %lf s\n"
+               " L2 Write = %lf s\n"
+               " L2 Read  = %lf s\n"
+               " L3 Write = %lf s\n"
+               " L3 Read  = %lf s\n"
+               " L4 Write = %lf s\n"
+               " L4 Read  = %lf s\n"
+               "-----------------------\n"
+               "\n"
+               "Pure MPI-I/O\n"
+               "-----------------------\n"
+               " Write    = %lf s\n"
+               " Read     = %lf s\n"
+               "-----------------------\n"
+               "\n"
+               "Pure POSIX\n"
+               "-----------------------\n"
+               " Write    = %lf s\n"
+               " Read     = %lf s\n"
+               "-----------------------\n"
+               "\n",
+               dTFtiWrite[0],dTFtiRead[0],
+               dTFtiWrite[1],dTFtiRead[1],
+               dTFtiWrite[2],dTFtiRead[2],
+               dTFtiWrite[3],dTFtiRead[3],
+               dTMpiWrite, dTMpiRead,
+               dTPosixWrite, dTPosixRead);
+    } 
+
+
     MPI_Finalize();
     
     return 0;
