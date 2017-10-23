@@ -274,6 +274,7 @@ int main(int argc, char *argv[]) {
 
         /* BEGIN READ */
 
+        MPI_Barrier(MPI_COMM_WORLD);    
         start = MPI_Wtime();
 
         fd = fopen(tempfile, "rb");  
@@ -538,6 +539,11 @@ int main(int argc, char *argv[]) {
                "##   RESULTS         ##\n"
                "#######################\n"
                "\n"
+               "Number of processes: %i\n"
+               "Allocated memory per process: \n%llu B | %lf MB | %lf GB\n"
+               "Allocated memory in total: \n%llu B | %lf MB | %lf GB\n"
+               "\n"
+               "=========================================\n"
                "FTI - POSIX\n"
                "-----------------------------------------\n"
                " L1 Write = %lf s (dT = %lf s) \n"
@@ -548,8 +554,9 @@ int main(int argc, char *argv[]) {
                " L3 Read  = %lf s (dT = %lf s) \n"
                " L4 Write = %lf s (dT = %lf s) \n"
                " L4 Read  = %lf s (dT = %lf s) \n"
-               "-----------------------------------------\n"
+               "=========================================\n"
                "\n"
+               "=========================================\n"
                "FTI - MPI-I/O\n"
                "-----------------------------------------\n"
                " L1 Write = %lf s (dT = %lf s) \n"
@@ -560,20 +567,29 @@ int main(int argc, char *argv[]) {
                " L3 Read  = %lf s (dT = %lf s) \n"
                " L4 Write = %lf s (dT = %lf s) \n"
                " L4 Read  = %lf s (dT = %lf s) \n"
-               "-----------------------------------------\n"
+               "=========================================\n"
                "\n"
+               "=========================================\n"
                "Pure MPI-I/O\n"
                "-----------------------------------------\n"
                " Write    = %lf s (dT = %lf s)\n"
                " Read     = %lf s (dT = %lf s)\n"
-               "-----------------------------------------\n"
+               "=========================================\n"
                "\n"
+               "=========================================\n"
                "Pure POSIX\n"
                "-----------------------------------------\n"
                " Write    = %lf s (dT = %lf s)\n"
                " Read     = %lf s (dT = %lf s)\n"
-               "-----------------------------------------\n"
+               "=========================================\n"
                "\n",
+               size,
+               SIZE,
+               (SIZE*1.0)/(1024*1024),
+               (SIZE*1.0)/(1024*1024*1024),
+               SIZE*size,
+               (SIZE*1.0*size)/(1024*1024),
+               (SIZE*1.0*size)/(1024*1024*1024),
                dTFtiWriteMean[0],dTFtiWriteSigma[0],
                dTFtiReadMean[0],dTFtiReadSigma[0],
                dTFtiWriteMean[1],dTFtiWriteSigma[1],
