@@ -4,6 +4,7 @@ int perr = 0;
 unsigned long long SIZE = 1073741824;
 char tmpdir[10]="tmpXXXXXX";
 char config_file[256] = "fti.ini";
+int NUM_ITER = 1;
 int FTI_CPU_PER_NODE = 2;
 char FTI_LOCAL_DIR[256] = "Local";
 char FTI_GLOBAL_DIR[256] = "Global";

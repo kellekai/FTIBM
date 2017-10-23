@@ -15,6 +15,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
+#include <math.h>
 
 unsigned long long SIZE;
 
@@ -29,9 +30,16 @@ int rank, size, perr, ierr, ierr_len, striping_factor, R_SF_SET, L_SF;
 char FTI_LOCAL_DIR[256], FTI_GLOBAL_DIR[256], FTI_META_DIR[256];
 int FTI_CPU_PER_NODE, FTI_GROUP_SIZE, FTI_MAX_SYNC_ITER, FTI_LOCAL_TEST;
 long L_SU;
+int NUM_ITER; // max 100 iterations
 double start, end;
-double dTPosixRead, dTPosixWrite, dTMpiRead, dTMpiWrite; 
-double dTFtiRead[8], dTFtiWrite[8];
+double dTPosixReadMean, dTPosixReadSigma;
+double dTPosixWriteMean, dTPosixWriteSigma;
+double dTMpiReadMean, dTMpiReadSigma;
+double dTMpiWriteMean, dTMpiWriteSigma;
+double dTPosixRead[100], dTPosixWrite[100], dTMpiRead[100], dTMpiWrite[100]; 
+double dTFtiRead[800], dTFtiWrite[800]; // max 100 iterations
+double dTFtiReadMean[8], dTFtiWriteMean[8];
+double dTFtiReadSigma[8], dTFtiWriteSigma[8];
 char *arr;
 FILE *fd;
 char tmpdir[10];
