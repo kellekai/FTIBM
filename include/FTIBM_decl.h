@@ -31,7 +31,7 @@ int FTI_CPU_PER_NODE, FTI_GROUP_SIZE, FTI_MAX_SYNC_ITER, FTI_LOCAL_TEST;
 long L_SU;
 double start, end;
 double dTPosixRead, dTPosixWrite, dTMpiRead, dTMpiWrite; 
-double dTFtiRead[4], dTFtiWrite[4];
+double dTFtiRead[8], dTFtiWrite[8];
 char *arr;
 FILE *fd;
 char tmpdir[10];

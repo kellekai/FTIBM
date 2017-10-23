@@ -8,13 +8,12 @@ int main(int argc, char *argv[]) {
     MPI_Comm_rank(MPI_COMM_WORLD,&rank);
     MPI_Comm_size(MPI_COMM_WORLD,&size);    
     arr = (char*) malloc(SIZE);
-    gcomm = MPI_COMM_WORLD;
     
     if (rank == 0) {
         init_config_file(config_file);
     }
     
-    MPI_Barrier(gcomm);
+    MPI_Barrier(MPI_COMM_WORLD);
 
     parse_arguments(argc, argv);
 
@@ -41,7 +40,7 @@ int main(int argc, char *argv[]) {
                (SIZE*1.0*size)/(1024*1024*1024));
     } 
 
-    MPI_Barrier(gcomm);
+    MPI_Barrier(MPI_COMM_WORLD);
 
 // +-----------------------------------------------------------------------------+
 
@@ -59,20 +58,25 @@ int main(int argc, char *argv[]) {
 
     if(rank == 0) {
         printf("MPIIO: start writing in file\n");
+        // create temp directory
         if (mkdtemp(tmpdir) == NULL) {
             perr = errno;
-            printf("[POSIX ERROR] %s\n", strerror(perr));
+            printf("'mkdtemp() call failed' [POSIX ERROR]: %s\n", strerror(perr));
             perr = 0;
-            MPI_Abort(gcomm, -1);
+            MPI_Abort(MPI_COMM_WORLD, -1);
         }
     }
     
-    MPI_Bcast(tmpdir,10,MPI_CHAR,0,gcomm);
+    MPI_Bcast(tmpdir,10,MPI_CHAR,0,MPI_COMM_WORLD);
     sprintf(tempfile,"%s/mpiio.f",tmpdir);
     
 #ifdef FTI_LUSTRE
     if(rank == 0) {
-        llapi_file_create(tempfile, L_SU, -1, L_SF, 0); // default L_SU = 4194304, L_SF = -1 -> stipe over all OST's
+        /* 
+         * default L_SU = 4194304 -> 4MB ## striping unit
+         * L_SF = -1 -> stipe over all OST's ## striping factor
+        */
+        llapi_file_create(tempfile, L_SU, -1, L_SF, 0);
         //llapi_file_create("tmp/test.file", 0, -1, 0, 0);  // set to Lustre default.
         lum_file = alloc_lum();
         llapi_file_get_stripe(tempfile, lum_file); 
@@ -84,28 +88,28 @@ int main(int argc, char *argv[]) {
 /* BEGIN WRITE */
     
     start = MPI_Wtime();
-    ierr = MPI_File_open(gcomm, tempfile, MPI_MODE_WRONLY|MPI_MODE_CREATE, info, &pfh);
-    //MPI_File_open(gcomm, "tmp/test.file", MPI_MODE_WRONLY, MPI_INFO_NULL, &pfh); // do not pass hints
+    ierr = MPI_File_open(MPI_COMM_WORLD, tempfile, MPI_MODE_WRONLY|MPI_MODE_CREATE, info, &pfh);
+    //MPI_File_open(MPI_COMM_WORLD, tempfile, MPI_MODE_WRONLY, MPI_INFO_NULL, &pfh); // do not pass hints
     
     if (ierr!=0) {
         perr = errno;
-        printf("[POSIX ERROR] %s\n",strerror(perr));
+        printf("'MPI_File_open call failed' [POSIX ERROR]: %s\n",strerror(perr));
         MPI_Error_string(ierr, ierr_str, &ierr_len);
-        printf("[MPI ERROR] %s\n", ierr_str);
+        printf("'MPI_File_open call failed' [MPI ERROR]: %s\n", ierr_str);
         perr = 0;
-        MPI_Abort(gcomm, -1);
+        MPI_Abort(MPI_COMM_WORLD, -1);
     }
 
     ierr = MPI_File_write_at(pfh, SIZE*rank, arr, SIZE, MPI_CHAR, &status);
     
     if (ierr!=0) {
         perr = errno;
-        printf("[POSIX ERROR] %s\n",strerror(perr));
+        printf("'MPI_File_write_at call failed' [POSIX ERROR]: %s\n",strerror(perr));
         MPI_Error_string(ierr, ierr_str, &ierr_len);
-        printf("[ERROR] %s\n", ierr_str);
+        printf("'MPI_File_write_at call failed' [MPI ERROR]: %s\n", ierr_str);
         perr = 0;
         MPI_File_close(&pfh);
-        MPI_Abort(gcomm, -1);
+        MPI_Abort(MPI_COMM_WORLD, -1);
     }
 
     MPI_File_close(&pfh);
@@ -115,7 +119,7 @@ int main(int argc, char *argv[]) {
 
 /* END  WRITE */
     
-    MPI_Barrier(gcomm);
+    MPI_Barrier(MPI_COMM_WORLD);
     
     if(rank == 0) {
         printf("MPIIO: finished write in %lf seconds!\n", dTMpiWrite);
@@ -125,33 +129,33 @@ int main(int argc, char *argv[]) {
         printf("MPIIO: Start reading from file\n");
     }
 
-    MPI_Barrier(gcomm);
+    MPI_Barrier(MPI_COMM_WORLD);
     
 /* BEGIN READ */
     
     start = MPI_Wtime();
-    ierr = MPI_File_open(gcomm, tempfile, MPI_MODE_RDONLY, info, &pfh);
-    //MPI_File_open(gcomm, "tmp/test.file", MPI_MODE_WRONLY, MPI_INFO_NULL, &pfh); // do not pass hints
+    ierr = MPI_File_open(MPI_COMM_WORLD, tempfile, MPI_MODE_RDONLY, info, &pfh);
+    //MPI_File_open(MPI_COMM_WORLD, tempfile, MPI_MODE_WRONLY, MPI_INFO_NULL, &pfh); // do not pass hints
     
     if (ierr!=0) {
         perr = errno;
-        printf("[POSIX ERROR] %s\n",strerror(perr));
+        printf("'MPI_File_open call failed' [POSIX ERROR]: %s\n",strerror(perr));
         MPI_Error_string(ierr, ierr_str, &ierr_len);
-        printf("[MPI ERROR] %s\n", ierr_str);
+        printf("'MPI_File_open call failed' [MPI ERROR]: %s\n", ierr_str);
         perr = 0;
-        MPI_Abort(gcomm, -1);
+        MPI_Abort(MPI_COMM_WORLD, -1);
     }
 
     ierr = MPI_File_read_at(pfh, SIZE*rank, arr, SIZE, MPI_CHAR, &status);
     
     if (ierr!=0) {
         perr = errno;
-        printf("[POSIX ERROR] %s\n",strerror(perr));
+        printf("'MPI_File_read_at call failed' [POSIX ERROR]: %s\n",strerror(perr));
         MPI_Error_string(ierr, ierr_str, &ierr_len);
-        printf("[ERROR] %s\n", ierr_str);
+        printf("'MPI_File_read_at call failed' [MPI ERROR]: %s\n", ierr_str);
         perr = 0;
         MPI_File_close(&pfh);
-        MPI_Abort(gcomm, -1);
+        MPI_Abort(MPI_COMM_WORLD, -1);
     }
 
     MPI_File_close(&pfh);
@@ -167,7 +171,7 @@ int main(int argc, char *argv[]) {
         rmdir(tmpdir);
     }
     
-    MPI_Barrier(gcomm);
+    MPI_Barrier(MPI_COMM_WORLD);
 
 // +==============+
 // | PURE MPI END |
@@ -179,21 +183,22 @@ int main(int argc, char *argv[]) {
 // | PURE POSIX BEGIN |
 // +==================+
 
+    // reset temp file pattern
     strcpy(tmpdir,"tmpXXXXXX");
 
     if(rank == 0) {
         printf("POSIX: start writing in file\n");
         if (mkdtemp(tmpdir) == NULL) {
             perr = errno;
-            printf("[POSIX ERROR] %s\n", strerror(perr));
+            printf("'mkdtemp call failed' [POSIX ERROR]: %s\n", strerror(perr));
             perr = 0;
-            MPI_Abort(gcomm, -1);
+            MPI_Abort(MPI_COMM_WORLD, -1);
         }
     }
     
-    MPI_Barrier(gcomm);
+    MPI_Barrier(MPI_COMM_WORLD);
 
-    MPI_Bcast(tmpdir,10,MPI_CHAR,0,gcomm);
+    MPI_Bcast(tmpdir,10,MPI_CHAR,0,MPI_COMM_WORLD);
     
     sprintf(tempfile, "%s/rank-%i.f", tmpdir, rank);
 
@@ -205,13 +210,13 @@ int main(int argc, char *argv[]) {
     
     if (fd == NULL) {
         perr = errno;
-        printf("[POSIX ERROR - %i] %s\n", rank, strerror(perr));
+        printf("'fopen call failed' [POSIX ERROR - %i]: %s\n", rank, strerror(perr));
         perr = 0;
         rmdir(tmpdir);
 #ifdef FTI_LUSTRE
         free(lum_file);
 #endif
-        MPI_Abort(gcomm, -1);
+        MPI_Abort(MPI_COMM_WORLD, -1);
     }
 
     long written = 0;
@@ -221,7 +226,7 @@ int main(int argc, char *argv[]) {
     
         if (written == 0) {
             perr = errno;
-            printf("[POSIX ERROR - %i] %s\n", rank, strerror(perr));
+            printf("'fwrite call failed' [POSIX ERROR - %i]: %s\n", rank, strerror(perr));
             perr = 0;
             fclose(fd);
             remove(tempfile);
@@ -229,7 +234,7 @@ int main(int argc, char *argv[]) {
 #ifdef FTI_LUSTRE
             free(lum_file);
 #endif
-            MPI_Abort(gcomm, -1);
+            MPI_Abort(MPI_COMM_WORLD, -1);
         } else if (written < SIZE) { 
             printf("%lu Bytes of %lu Bytes written...", written, SIZE);
         }
@@ -239,7 +244,7 @@ int main(int argc, char *argv[]) {
 
     fclose(fd); 
 
-    MPI_Barrier(gcomm);    
+    MPI_Barrier(MPI_COMM_WORLD);    
     end = MPI_Wtime();
 
     dTPosixWrite = end-start;
@@ -259,13 +264,13 @@ int main(int argc, char *argv[]) {
     
     if (fd == NULL) {
         perr = errno;
-        printf("[POSIX ERROR - %i] %s\n", rank, strerror(perr));
+        printf("'fopen call failed' [POSIX ERROR - %i]: %s\n", rank, strerror(perr));
         perr = 0;
         rmdir(tmpdir);
 #ifdef FTI_LUSTRE
         free(lum_file);
 #endif
-        MPI_Abort(gcomm, -1);
+        MPI_Abort(MPI_COMM_WORLD, -1);
     }
 
     long read = 0;
@@ -275,7 +280,7 @@ int main(int argc, char *argv[]) {
     
         if (read == 0) {
             perr = errno;
-            printf("[POSIX ERROR] %s\n",strerror(perr));
+            printf("'fread call failed' [POSIX ERROR]: %s\n",strerror(perr));
             perr = 0;
             fclose(fd);
             remove(tempfile);
@@ -283,7 +288,7 @@ int main(int argc, char *argv[]) {
 #ifdef FTI_LUSTRE
             free(lum_file);
 #endif
-            MPI_Abort(gcomm, -1);
+            MPI_Abort(MPI_COMM_WORLD, -1);
         } else if (written < SIZE) { 
             printf("%lu Bytes of %lu Bytes written...", written, SIZE);
         }
@@ -293,7 +298,7 @@ int main(int argc, char *argv[]) {
 
     fclose(fd); 
 
-    MPI_Barrier(gcomm);    
+    MPI_Barrier(MPI_COMM_WORLD);    
     end = MPI_Wtime();
 
     dTPosixRead = end-start;
@@ -308,7 +313,7 @@ int main(int argc, char *argv[]) {
     }
 #endif
     remove(tempfile);
-    MPI_Barrier(gcomm);    
+    MPI_Barrier(MPI_COMM_WORLD);    
 
     if(rank == 0) {
         printf("POSIX: finished read in %lf seconds!\n", dTPosixRead);
@@ -328,82 +333,83 @@ int main(int argc, char *argv[]) {
 // | FTI BEGIN |
 // +===========+
 
-/* DO CHECKPOINT AND RESTART FOR ALL LEVELS */
+/* DO CHECKPOINT FOR ALL LEVELS AND DO RESTART FROM LEVEL 4 */
 
     dictionary *ini;
-    FTIT_type CHAR_TYPE;
-
-    if (rank == 0) {
-        ini = iniparser_load(config_file);
-        if (ini == NULL) {
-            printf("[ERROR] can't open configuration file.\n");
-            MPI_Abort(gcomm, -1);
+    char ioStr[2][2] = {"1","2"};
+    int ioFlag, keepFlag;
+    
+    for(i=0; i<8; i++) {
+        // if level 4, keep last checkpoint
+        keepFlag=((i%4+1) == 4);
+        ioFlag=(i == 4);
+        if (rank == 0 && ( keepFlag || ioFlag )) {
+            ini = iniparser_load(config_file);
+            if (ini == NULL) {
+                printf("[ERROR] can't open configuration file.\n");
+                MPI_Abort(MPI_COMM_WORLD, -1);
+            }
+            fd = fopen(config_file, "w");
+            if (keepFlag) {
+                iniparser_set(ini, "Basic:keep_last_ckpt", "1");
+            }
+            if (ioFlag) {
+            iniparser_set(ini, "Basic:ckpt_io", ioStr[i/4]);
+            }
+            iniparser_dump_ini(ini, fd);
+            fclose(fd);
+            iniparser_freedict(ini);
         }
-    }
-    MPI_Barrier(gcomm);
-    for(i=1; i<5; i++) {
-        //if (rank == 0) {
-        //    ini = iniparser_load(config_file);
-        //    if (ini == NULL) {
-        //        printf("[ERROR] can't open configuration file.\n");
-        //        MPI_Abort(gcomm, -1);
-        //    }
-        //    fd = fopen(config_file, "w");
-        //    iniparser_set(ini, "Basic:keep_last_ckpt", "1");
-        //    iniparser_dump_ini(ini, fd);
-        //    fclose(fd);
-        //    iniparser_freedict(ini);
-        //}
-        gcomm = MPI_COMM_WORLD;
-        MPI_Barrier(gcomm);
-        if (FTI_Init(config_file, gcomm) != FTI_SCES) {
+        MPI_Barrier(MPI_COMM_WORLD);
+        if (FTI_Init(config_file, MPI_COMM_WORLD) != FTI_SCES) {
             printf("FTI: failed to initialize.\n");
             MPI_Abort(MPI_COMM_WORLD, -1);
         }
-        gcomm = FTI_COMM_WORLD;
         FTI_Protect(0, arr, SIZE, FTI_CHAR);
         if (rank == 0) {
-            printf("FTI: Perform level %i Checkpoint.\n", i);
+            printf("FTI: Perform level %i Checkpoint.\n", i%4+1);
         }
         start = MPI_Wtime();
-        FTI_Checkpoint(i,i);
+        FTI_Checkpoint(i%4+1,i%4+1);
         end = MPI_Wtime();
-        dTFtiWrite[i-1] = end-start;
+        dTFtiWrite[i] = end-start;
         if (rank == 0) {
-            printf("FTI: Level %i Checkpoint took: %lf seconds!.\n", i, dTFtiWrite[i-1]);
+            printf("FTI: Level %i Checkpoint took: %lf seconds!.\n", 
+                    i%4+1, dTFtiWrite[i]);
         }
-        //FTI_Finalize();
-        //if (rank == 0) {
-        //    ini = iniparser_load(config_file);
-        //    if (ini == NULL) {
-        //        printf("[ERROR] can't open configuration file.\n");
-        //        MPI_Abort(gcomm, -1);
-        //    }
-        //    fd = fopen(config_file, "w");
-        //    iniparser_set(ini, "Basic:keep_last_ckpt", "0");
-        //    iniparser_dump_ini(ini, fd);
-        //    fclose(fd);
-        //    iniparser_freedict(ini);
-        //    printf("FTI: Recover from level %i.\n", i);
-        //}
-        MPI_Barrier(gcomm);
-        gcomm = MPI_COMM_WORLD;
-        MPI_Barrier(gcomm);
-        start = MPI_Wtime();
-        if (FTI_Init(config_file, gcomm) != FTI_SCES) {
-            printf("FTI: failed to initialize.\n");
-            MPI_Abort(MPI_COMM_WORLD, -1);
-        }
-        gcomm = FTI_COMM_WORLD;
-        FTI_Protect(0, arr, SIZE, FTI_CHAR);
-        FTI_Recover();
-        end = MPI_Wtime();
-        dTFtiRead[i-1] = end-start;
-        if (rank == 0) {
-            printf("FTI: Recovery from level %i Checkpoint took: %lf seconds!.\n", i, dTFtiRead[i-1]);
+        // if level 4, restart from PFS
+        if ( i%4+1 == 4 ) {
+            FTI_Finalize();
+            if (rank == 0) {
+                ini = iniparser_load(config_file);
+                if (ini == NULL) {
+                    printf("[ERROR] can't open configuration file.\n");
+                    MPI_Abort(MPI_COMM_WORLD, -1);
+                }
+                fd = fopen(config_file, "w");
+                // set keep_last_ckpt to 0 to have a cleanup at FTI_Finalize.
+                iniparser_set(ini, "Basic:keep_last_ckpt", "0");
+                iniparser_dump_ini(ini, fd);
+                fclose(fd);
+                iniparser_freedict(ini);
+                printf("FTI: Recover from level %i.\n", i%4+1);
+            }
+            MPI_Barrier(MPI_COMM_WORLD);
+            start = MPI_Wtime();
+            if (FTI_Init(config_file, MPI_COMM_WORLD) != FTI_SCES) {
+                printf("FTI: failed to initialize.\n");
+                MPI_Abort(MPI_COMM_WORLD, -1);
+            }
+            FTI_Protect(0, arr, SIZE, FTI_CHAR);
+            FTI_Recover();
+            end = MPI_Wtime();
+            dTFtiRead[i] = end-start;
+            if (rank == 0) {
+                printf("FTI: Recovery from level %i Checkpoint took: %lf seconds!.\n", 
+                        i%4+1, dTFtiRead[i]);
+            }
         }
         FTI_Finalize();
-        sleep(1);
     }
 
     remove(config_file);
@@ -420,14 +426,26 @@ int main(int argc, char *argv[]) {
                "##   RESULTS         ##\n"
                "#######################\n"
                "\n"
-               "FTI\n"
+               "FTI - POSIX\n"
                "-----------------------\n"
                " L1 Write = %lf s\n"
-               " L1 Read  = %lf s\n"
+//               " L1 Read  = %lf s\n"
                " L2 Write = %lf s\n"
-               " L2 Read  = %lf s\n"
+//               " L2 Read  = %lf s\n"
                " L3 Write = %lf s\n"
-               " L3 Read  = %lf s\n"
+//               " L3 Read  = %lf s\n"
+               " L4 Write = %lf s\n"
+               " L4 Read  = %lf s\n"
+               "-----------------------\n"
+               "\n"
+               "FTI - MPI-I/O\n"
+               "-----------------------\n"
+               " L1 Write = %lf s\n"
+//               " L1 Read  = %lf s\n"
+               " L2 Write = %lf s\n"
+//               " L2 Read  = %lf s\n"
+               " L3 Write = %lf s\n"
+//               " L3 Read  = %lf s\n"
                " L4 Write = %lf s\n"
                " L4 Read  = %lf s\n"
                "-----------------------\n"
@@ -444,10 +462,14 @@ int main(int argc, char *argv[]) {
                " Read     = %lf s\n"
                "-----------------------\n"
                "\n",
-               dTFtiWrite[0],dTFtiRead[0],
-               dTFtiWrite[1],dTFtiRead[1],
-               dTFtiWrite[2],dTFtiRead[2],
+               dTFtiWrite[0],//dTFtiRead[0],
+               dTFtiWrite[1],//dTFtiRead[1],
+               dTFtiWrite[2],//dTFtiRead[2],
                dTFtiWrite[3],dTFtiRead[3],
+               dTFtiWrite[4],//dTFtiRead[0],
+               dTFtiWrite[5],//dTFtiRead[1],
+               dTFtiWrite[6],//dTFtiRead[2],
+               dTFtiWrite[7],dTFtiRead[7],
                dTMpiWrite, dTMpiRead,
                dTPosixWrite, dTPosixRead);
     } 
@@ -476,7 +498,7 @@ void parse_arguments(int argc, char *argv[]) {
         }
     }
 
-    while ((oc = getopt(argc, argv, ":ln:g:u:f:d:m:M:")) != -1) {
+    while ((oc = getopt(argc, argv, ":lvVn:g:u:f:d:m:M:")) != -1) {
         switch (oc) {
             case 'm':
                 /* mem-size in bytes */
@@ -497,6 +519,20 @@ void parse_arguments(int argc, char *argv[]) {
                 if (rank == 0) {
                     iniparser_set(ini, "Basic:ckpt_dir", optarg);
                     printf("[CONFIG] FTI: ckpt_dir is set to '%s'\n", optarg);
+                }
+                break;
+            case 'v':
+                /* FTI verbosity */
+                if (rank == 0) {
+                    iniparser_set(ini, "basic:verbosity", "3");
+                    printf("[CONFIG] FTI: verbosity is set to 3 (quiet)\n");
+                }
+                break;
+            case 'V':
+                /* FTI verbosity */
+                if (rank == 0) {
+                    iniparser_set(ini, "basic:verbosity", "1");
+                    printf("[CONFIG] FTI: verbosity is set to 1 (debug)\n");
                 }
                 break;
             case 'l':
