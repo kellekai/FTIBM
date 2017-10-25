@@ -22,7 +22,7 @@ unsigned long long SIZE;
 void init_config_file(const char *config_file);
 static inline int maxint(int a, int b);
 static void *alloc_lum();
-void parse_arguments(int argc, char *argv[]);
+void parse_arguments(int argc, char *argv[], int rank);
 
 extern int errno;
 

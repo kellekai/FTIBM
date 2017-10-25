@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
     
     MPI_Barrier(MPI_COMM_WORLD);
 
-    parse_arguments(argc, argv);
+    parse_arguments(argc, argv, rank);
 
     if (rank == 0) {
         printf("\n"
@@ -622,9 +622,37 @@ int main(int argc, char *argv[]) {
 // | Function definitions |
 // +======================+
 
-void parse_arguments(int argc, char *argv[]) {
+void usage(char *argv[]) {
+    fprintf(stderr,
+            "usage: %s [OPTIONS [ARGS]]                                     \n\n"
+            "option -m or -M is mandatory.                                  \n\n"
+            "non-argument options:                                          \n"
+            "-h                     print this help                         \n"
+            "-l                     [FTI] set local_test=1                  \n"
+            "-v                     [FTI] set verbosity=1 (debug)           \n"
+            "-V                     [FTI] set verbosity=3 (quiet)           \n\n"
+            "argument options:                                              \n"
+            "-n nodesize            [FTI] set node_size='nodesize'          \n"
+            "-g groupsize           [FTI] set group_size='groupsize'        \n"
+            "-d localdir            [FTI] set ckpt_dir='localdir'           \n"
+            "-u striping-unit       [LUSTRE] set lustre striping unit       \n"
+            "-f striping-factor     [LUSTRE] set lustre striping factor     \n"
+            "-m memsize             set dynamic mem-size in Bytes           \n"
+            "-M memsize             set dynamic mem-size in MegaBytes       \n"
+            "-i iterations          set number of measurement runs          \n",
+            argv[0]);
+}
+            
+
+
+
+
+
+
+void parse_arguments(int argc, char *argv[], int rank) {
     
     int oc;
+    int memFlag = 0;
     dictionary *ini;
     FILE *fd;
 
@@ -636,8 +664,14 @@ void parse_arguments(int argc, char *argv[]) {
         }
     }
 
-    while ((oc = getopt(argc, argv, ":lvVi:n:g:u:f:d:m:M:")) != -1) {
+    while ((oc = getopt(argc, argv, ":hlvVi:n:g:u:f:d:m:M:")) != -1) {
         switch (oc) {
+            case 'h':
+                if(rank == 0) {
+                    usage(argv);
+                }
+                MPI_Finalize();
+                exit(0);
             case 'i':
                 /* # of iterations */
                 NUM_ITER = atoi(optarg);
@@ -647,17 +681,39 @@ void parse_arguments(int argc, char *argv[]) {
                 break;
             case 'm':
                 /* mem-size in bytes */
+                if(memFlag == 1) {
+                    if (rank == 0) {
+                        fprintf(stderr, "%s: Only one of the options"
+                                " '-M' or '-m' are allowed\n",
+                            argv[0]);
+                        usage(argv);
+                    }
+                MPI_Finalize();
+                exit(0);
+                }
                 SIZE = strtoull(optarg, NULL, 10);
                 if (rank == 0) {
                     printf("[CONFIG] memsize is: %llu bytes\n", SIZE);
                 }
+                memFlag = 1;
                 break;
             case 'M':
                 /* mem-size in megabytes */
+                if(memFlag == 1) {
+                    if (rank == 0) {
+                        fprintf(stderr, "%s: Only one of the options"
+                                " '-M' or '-m' are allowed\n",
+                            argv[0]);
+                        usage(argv);
+                    }
+                MPI_Finalize();
+                exit(0);
+                }
                 SIZE = strtoull(optarg, NULL, 10)*1024*1024;
                 if (rank == 0) {
                     printf("[CONFIG] memsize is: %llu MB\n", SIZE/(1024*1024));
                 }
+                memFlag = 1;
                 break;
             case 'd':
                 /* local directory */
@@ -717,14 +773,30 @@ void parse_arguments(int argc, char *argv[]) {
                 /* missing option argument */
                 fprintf(stderr, "%s: option '-%c' requires an argument\n",
                         argv[0], optopt);
-                break;
+                if(rank == 0) {
+                    usage(argv);
+                }
+                MPI_Finalize();
+                exit(0);
             case '?':
             default:
                 /* invalid option */
                 fprintf(stderr, "%s: option '-%c' is invalid: ignored\n",
                         argv[0], optopt);
-                break;
+                if(rank == 0) {
+                    usage(argv);
+                }
+                MPI_Finalize();
+                exit(0);
         }
+    }
+    if (memFlag == 0) {
+        if(rank == 0) {
+            fprintf(stderr,"%s: either -m or -M must be set\n",argv[0]);
+            usage(argv);
+        }
+        MPI_Finalize();
+        exit(0);
     }
     if (rank == 0) {
         fd = fopen(config_file, "w");
