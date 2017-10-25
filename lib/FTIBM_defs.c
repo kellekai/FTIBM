@@ -1,3 +1,10 @@
+/**
+ *  @file   FTIBM_defs.c
+ *  @author Kai Keller (kellekai@gmx.de)
+ *  @date   October, 2017
+ *  @brief  Function and variable definitions of I/O-Benchmark for FTI library.
+ */
+
 #include "FTIBM_decl.h"
 
 int perr = 0;

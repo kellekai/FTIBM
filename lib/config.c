@@ -1,3 +1,10 @@
+/**
+ *  @file   config.c
+ *  @author Kai Keller (kellekai@gmx.de)
+ *  @date   October, 2017
+ *  @brief  FTI config file of I/O-Benchmark for FTI library.
+ */
+
 #include "FTIBM_decl.h"
 
 void init_config_file(const char *config_file)

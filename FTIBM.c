@@ -1,3 +1,10 @@
+/**
+ *  @file   FTIBM.c
+ *  @author Kai Keller (kellekai@gmx.de)
+ *  @date   October, 2017
+ *  @brief  Main file of I/O-Benchmark for FTI library.
+ */
+
 #include "include/FTIBM_decl.h"
 
 int main(int argc, char *argv[]) {
