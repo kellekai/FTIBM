@@ -1,0 +1,1751 @@
+[CONFIG] memsize is: 1024 MB
+[CONFIG] FTI: group_size is set to 4
+[CONFIG] FTI: node_size is set to 12
+[CONFIG] FTI: ckpt_dir is set to '/dev/shm'
+[CONFIG] Number of iterations: 10
+
+#######################
+##   CONFIGURATION   ##
+#######################
+
+Number of processes: 9600
+Allocated memory per process: 
+1073741824 B | 1024.000000 MB | 1.000000 GB
+Allocated memory in total: 
+10307921510400 B | 9830400.000000 MB | 9600.000000 GB
+
+#######################
+##     START TEST    ##
+#######################
+
+
+## PURE MPIIO - ITERATION 1 ##
+
+MPIIO: start writing in file
+stripe-size: 4194304, stripe-count: 40
+MPIIO: finished write in 278.058518 seconds!
+MPIIO: Start reading from file
+MPIIO: finished read in 19.547543 seconds!
+
+## PURE MPIIO - ITERATION 2 ##
+
+MPIIO: start writing in file
+stripe-size: 4194304, stripe-count: 40
+MPIIO: finished write in 386.892477 seconds!
+MPIIO: Start reading from file
+MPIIO: finished read in 19.149032 seconds!
+
+## PURE MPIIO - ITERATION 3 ##
+
+MPIIO: start writing in file
+stripe-size: 4194304, stripe-count: 40
+MPIIO: finished write in 350.609910 seconds!
+MPIIO: Start reading from file
+MPIIO: finished read in 21.324851 seconds!
+
+## PURE MPIIO - ITERATION 4 ##
+
+MPIIO: start writing in file
+stripe-size: 4194304, stripe-count: 40
+MPIIO: finished write in 437.480435 seconds!
+MPIIO: Start reading from file
+MPIIO: finished read in 21.344067 seconds!
+
+## PURE MPIIO - ITERATION 5 ##
+
+MPIIO: start writing in file
+stripe-size: 4194304, stripe-count: 40
+MPIIO: finished write in 311.561050 seconds!
+MPIIO: Start reading from file
+MPIIO: finished read in 19.963785 seconds!
+
+## PURE MPIIO - ITERATION 6 ##
+
+MPIIO: start writing in file
+stripe-size: 4194304, stripe-count: 40
+MPIIO: finished write in 354.422687 seconds!
+MPIIO: Start reading from file
+MPIIO: finished read in 21.390874 seconds!
+
+## PURE MPIIO - ITERATION 7 ##
+
+MPIIO: start writing in file
+stripe-size: 4194304, stripe-count: 40
+MPIIO: finished write in 302.294251 seconds!
+MPIIO: Start reading from file
+MPIIO: finished read in 20.301952 seconds!
+
+## PURE MPIIO - ITERATION 8 ##
+
+MPIIO: start writing in file
+stripe-size: 4194304, stripe-count: 40
+MPIIO: finished write in 369.707830 seconds!
+MPIIO: Start reading from file
+MPIIO: finished read in 23.564790 seconds!
+
+## PURE MPIIO - ITERATION 9 ##
+
+MPIIO: start writing in file
+stripe-size: 4194304, stripe-count: 40
+MPIIO: finished write in 360.897350 seconds!
+MPIIO: Start reading from file
+MPIIO: finished read in 25.599870 seconds!
+
+## PURE MPIIO - ITERATION 10 ##
+
+MPIIO: start writing in file
+stripe-size: 4194304, stripe-count: 40
+MPIIO: finished write in 471.346397 seconds!
+MPIIO: Start reading from file
+MPIIO: finished read in 19.707045 seconds!
+
+## PURE POSIX - ITERATION 1 ##
+
+POSIX: start writing in file
+POSIX: finished write in 127.885900 seconds!
+POSIX: start reading from file
+POSIX: finished read in 0.646751 seconds!
+stripe-size: 1048576, stripe-count: 1
+
+## PURE POSIX - ITERATION 2 ##
+
+POSIX: start writing in file
+POSIX: finished write in 127.566259 seconds!
+POSIX: start reading from file
+POSIX: finished read in 0.611601 seconds!
+stripe-size: 1048576, stripe-count: 1
+
+## PURE POSIX - ITERATION 3 ##
+
+POSIX: start writing in file
+POSIX: finished write in 118.638409 seconds!
+POSIX: start reading from file
+POSIX: finished read in 0.612228 seconds!
+stripe-size: 1048576, stripe-count: 1
+
+## PURE POSIX - ITERATION 4 ##
+
+POSIX: start writing in file
+POSIX: finished write in 128.209238 seconds!
+POSIX: start reading from file
+POSIX: finished read in 0.609896 seconds!
+stripe-size: 1048576, stripe-count: 1
+
+## PURE POSIX - ITERATION 5 ##
+
+POSIX: start writing in file
+POSIX: finished write in 125.978122 seconds!
+POSIX: start reading from file
+POSIX: finished read in 0.613312 seconds!
+stripe-size: 1048576, stripe-count: 1
+
+## PURE POSIX - ITERATION 6 ##
+
+POSIX: start writing in file
+POSIX: finished write in 127.027128 seconds!
+POSIX: start reading from file
+POSIX: finished read in 0.634512 seconds!
+stripe-size: 1048576, stripe-count: 1
+
+## PURE POSIX - ITERATION 7 ##
+
+POSIX: start writing in file
+POSIX: finished write in 118.289881 seconds!
+POSIX: start reading from file
+POSIX: finished read in 0.820293 seconds!
+stripe-size: 1048576, stripe-count: 1
+
+## PURE POSIX - ITERATION 8 ##
+
+POSIX: start writing in file
+POSIX: finished write in 124.247013 seconds!
+POSIX: start reading from file
+POSIX: finished read in 0.618252 seconds!
+stripe-size: 1048576, stripe-count: 1
+
+## PURE POSIX - ITERATION 9 ##
+
+POSIX: start writing in file
+POSIX: finished write in 126.250571 seconds!
+POSIX: start reading from file
+POSIX: finished read in 0.611402 seconds!
+stripe-size: 1048576, stripe-count: 1
+
+## PURE POSIX - ITERATION 10 ##
+
+POSIX: start writing in file
+POSIX: finished write in 118.051281 seconds!
+POSIX: start reading from file
+POSIX: finished read in 0.617315 seconds!
+stripe-size: 1048576, stripe-count: 1
+
+## FTI POSIX - ITERATION 1 ##
+
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_20-27-02 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 0.38 sec. (Pt:0.37s, Cl:0.01s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 1 (L1) (1024.00 MB/proc) taken in 3.14 sec. (Wt:0.00s, Wr:2.76s, Ps:0.38s) 
+FTI: Level 1 Checkpoint took: 3.142291 seconds!.
+FTI: Perform recovery of level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_20-27-02 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 1 with Ckpt. 1. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 1 Checkpoint took 4.838651 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_20-27-14 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 3.55 sec. (Pt:3.55s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 2 (L2) (1024.00 MB/proc) taken in 6.21 sec. (Wt:0.00s, Wr:2.66s, Ps:3.55s) 
+FTI: Level 2 Checkpoint took: 6.215732 seconds!.
+FTI: Perform recovery of level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_20-27-14 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 2 with Ckpt. 2. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 2 Checkpoint took 6.499945 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_20-27-31 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 13.16 sec. (Pt:13.15s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 3 (L3) (1024.00 MB/proc) taken in 15.85 sec. (Wt:0.00s, Wr:2.70s, Ps:13.16s) 
+FTI: Level 3 Checkpoint took: 15.853389 seconds!.
+FTI: Perform recovery of level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_20-27-31 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 3 with Ckpt. 3. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 3 Checkpoint took 8.987458 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_20-28-01 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 4 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 1.22 sec. (Pt:0.13s, Cl:1.09s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 4 (L4) (1024.00 MB/proc) taken in 133.08 sec. (Wt:0.00s, Wr:131.86s, Ps:1.22s) 
+FTI: Level 4 Checkpoint took: 133.079949 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+FTI: Recover from level 4.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_20-28-01 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 4 with Ckpt. 4. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Recovery from level 4 Checkpoint took: 3.219009 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+
+## FTI MPIIO - ITERATION 1 ##
+
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_20-30-24 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 0.33 sec. (Pt:0.33s, Cl:0.01s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 1 (L1) (1024.00 MB/proc) taken in 3.14 sec. (Wt:0.00s, Wr:2.81s, Ps:0.33s) 
+FTI: Level 1 Checkpoint took: 3.144605 seconds!.
+FTI: Perform recovery of level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_20-30-24 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 1 with Ckpt. 1. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 1 Checkpoint took 4.496073 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_20-30-37 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 4.52 sec. (Pt:4.52s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 2 (L2) (1024.00 MB/proc) taken in 8.69 sec. (Wt:0.00s, Wr:4.17s, Ps:4.52s) 
+FTI: Level 2 Checkpoint took: 8.695533 seconds!.
+FTI: Perform recovery of level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_20-30-37 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 2 with Ckpt. 2. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 2 Checkpoint took 6.113993 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_20-30-57 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 13.37 sec. (Pt:13.37s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 3 (L3) (1024.00 MB/proc) taken in 15.86 sec. (Wt:0.00s, Wr:2.49s, Ps:13.37s) 
+FTI: Level 3 Checkpoint took: 15.864179 seconds!.
+FTI: Perform recovery of level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_20-30-57 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 3 with Ckpt. 3. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 3 Checkpoint took 8.509950 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_20-31-26 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 4 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 0.60 sec. (Pt:0.05s, Cl:0.55s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 4 (L4) (1024.00 MB/proc) taken in 325.61 sec. (Wt:0.00s, Wr:325.01s, Ps:0.60s) 
+FTI: Level 4 Checkpoint took: 325.614369 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+FTI: Recover from level 4.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_20-31-26 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 4 with Ckpt. 4. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Recovery from level 4 Checkpoint took: 26.387305 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+
+## FTI POSIX - ITERATION 2 ##
+
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_20-37-22 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 0.97 sec. (Pt:0.79s, Cl:0.19s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 1 (L1) (1024.00 MB/proc) taken in 3.51 sec. (Wt:0.00s, Wr:2.53s, Ps:0.97s) 
+FTI: Level 1 Checkpoint took: 3.544326 seconds!.
+FTI: Perform recovery of level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_20-37-22 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 1 with Ckpt. 1. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 1 Checkpoint took 4.164347 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_20-37-34 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 3.66 sec. (Pt:3.66s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 2 (L2) (1024.00 MB/proc) taken in 6.41 sec. (Wt:0.00s, Wr:2.75s, Ps:3.66s) 
+FTI: Level 2 Checkpoint took: 6.411924 seconds!.
+FTI: Perform recovery of level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_20-37-34 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 2 with Ckpt. 2. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 2 Checkpoint took 7.546191 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_20-37-52 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 12.34 sec. (Pt:12.34s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 3 (L3) (1024.00 MB/proc) taken in 14.92 sec. (Wt:0.00s, Wr:2.58s, Ps:12.34s) 
+FTI: Level 3 Checkpoint took: 14.923964 seconds!.
+FTI: Perform recovery of level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_20-37-52 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 3 with Ckpt. 3. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 3 Checkpoint took 6.373755 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_20-38-18 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 4 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 1.04 sec. (Pt:0.16s, Cl:0.88s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 4 (L4) (1024.00 MB/proc) taken in 119.97 sec. (Wt:0.00s, Wr:118.93s, Ps:1.04s) 
+FTI: Level 4 Checkpoint took: 119.970327 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+FTI: Recover from level 4.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_20-38-18 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 4 with Ckpt. 4. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Recovery from level 4 Checkpoint took: 3.577774 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+
+## FTI MPIIO - ITERATION 2 ##
+
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_20-40-30 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 0.35 sec. (Pt:0.35s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 1 (L1) (1024.00 MB/proc) taken in 3.13 sec. (Wt:0.00s, Wr:2.77s, Ps:0.35s) 
+FTI: Level 1 Checkpoint took: 3.128298 seconds!.
+FTI: Perform recovery of level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_20-40-30 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 1 with Ckpt. 1. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 1 Checkpoint took 4.509720 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_20-40-44 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 3.54 sec. (Pt:3.54s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 2 (L2) (1024.00 MB/proc) taken in 6.42 sec. (Wt:0.00s, Wr:2.88s, Ps:3.54s) 
+FTI: Level 2 Checkpoint took: 6.423869 seconds!.
+FTI: Perform recovery of level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_20-40-44 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 2 with Ckpt. 2. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 2 Checkpoint took 6.035895 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_20-41-01 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 12.79 sec. (Pt:12.78s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 3 (L3) (1024.00 MB/proc) taken in 19.41 sec. (Wt:0.00s, Wr:6.62s, Ps:12.79s) 
+FTI: Level 3 Checkpoint took: 19.409120 seconds!.
+FTI: Perform recovery of level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_20-41-01 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 3 with Ckpt. 3. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 3 Checkpoint took 6.119617 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_20-41-31 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 4 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 0.70 sec. (Pt:0.09s, Cl:0.61s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 4 (L4) (1024.00 MB/proc) taken in 369.80 sec. (Wt:0.00s, Wr:369.10s, Ps:0.70s) 
+FTI: Level 4 Checkpoint took: 369.797682 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+FTI: Recover from level 4.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_20-41-31 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 4 with Ckpt. 4. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Recovery from level 4 Checkpoint took: 21.845772 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+
+## FTI POSIX - ITERATION 3 ##
+
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_20-48-07 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 0.03 sec. (Pt:0.03s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 1 (L1) (1024.00 MB/proc) taken in 3.49 sec. (Wt:0.00s, Wr:3.45s, Ps:0.03s) 
+FTI: Level 1 Checkpoint took: 3.488154 seconds!.
+FTI: Perform recovery of level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_20-48-07 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 1 with Ckpt. 1. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 1 Checkpoint took 4.865750 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_20-48-19 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 3.70 sec. (Pt:3.70s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 2 (L2) (1024.00 MB/proc) taken in 6.39 sec. (Wt:0.00s, Wr:2.68s, Ps:3.70s) 
+FTI: Level 2 Checkpoint took: 6.387244 seconds!.
+FTI: Perform recovery of level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_20-48-19 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 2 with Ckpt. 2. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 2 Checkpoint took 8.031615 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_20-48-39 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 12.54 sec. (Pt:12.54s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 3 (L3) (1024.00 MB/proc) taken in 15.28 sec. (Wt:0.00s, Wr:2.74s, Ps:12.54s) 
+FTI: Level 3 Checkpoint took: 15.283125 seconds!.
+FTI: Perform recovery of level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_20-48-39 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 3 with Ckpt. 3. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 3 Checkpoint took 6.795941 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_20-49-06 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 4 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 1.04 sec. (Pt:0.14s, Cl:0.90s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 4 (L4) (1024.00 MB/proc) taken in 122.23 sec. (Wt:0.00s, Wr:121.19s, Ps:1.04s) 
+FTI: Level 4 Checkpoint took: 122.232745 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+FTI: Recover from level 4.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_20-49-06 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 4 with Ckpt. 4. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Recovery from level 4 Checkpoint took: 3.210722 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+
+## FTI MPIIO - ITERATION 3 ##
+
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_20-51-19 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 0.18 sec. (Pt:0.17s, Cl:0.01s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 1 (L1) (1024.00 MB/proc) taken in 2.83 sec. (Wt:0.00s, Wr:2.65s, Ps:0.18s) 
+FTI: Level 1 Checkpoint took: 2.827237 seconds!.
+FTI: Perform recovery of level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_20-51-19 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 1 with Ckpt. 1. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 1 Checkpoint took 5.707548 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_20-51-31 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 3.68 sec. (Pt:3.67s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 2 (L2) (1024.00 MB/proc) taken in 6.36 sec. (Wt:0.00s, Wr:2.68s, Ps:3.68s) 
+FTI: Level 2 Checkpoint took: 6.357058 seconds!.
+FTI: Perform recovery of level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_20-51-31 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 2 with Ckpt. 2. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 2 Checkpoint took 6.404857 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_20-51-49 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 12.32 sec. (Pt:12.32s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 3 (L3) (1024.00 MB/proc) taken in 15.02 sec. (Wt:0.00s, Wr:2.70s, Ps:12.32s) 
+FTI: Level 3 Checkpoint took: 15.018368 seconds!.
+FTI: Perform recovery of level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_20-51-49 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 3 with Ckpt. 3. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 3 Checkpoint took 5.970272 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_20-52-14 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 4 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 3.51 sec. (Pt:2.93s, Cl:0.58s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 4 (L4) (1024.00 MB/proc) taken in 456.92 sec. (Wt:0.00s, Wr:453.40s, Ps:3.51s) 
+FTI: Level 4 Checkpoint took: 456.919065 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+FTI: Recover from level 4.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_20-52-14 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 4 with Ckpt. 4. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Recovery from level 4 Checkpoint took: 50.469949 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+
+## FTI POSIX - ITERATION 4 ##
+
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-00-45 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 0.08 sec. (Pt:0.08s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 1 (L1) (1024.00 MB/proc) taken in 3.45 sec. (Wt:0.00s, Wr:3.37s, Ps:0.08s) 
+FTI: Level 1 Checkpoint took: 3.451185 seconds!.
+FTI: Perform recovery of level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-00-45 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 1 with Ckpt. 1. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 1 Checkpoint took 4.389381 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-00-57 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 3.63 sec. (Pt:3.62s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 2 (L2) (1024.00 MB/proc) taken in 6.36 sec. (Wt:0.00s, Wr:2.73s, Ps:3.63s) 
+FTI: Level 2 Checkpoint took: 6.360883 seconds!.
+FTI: Perform recovery of level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-00-57 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 2 with Ckpt. 2. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 2 Checkpoint took 6.719357 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-01-15 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 12.42 sec. (Pt:12.42s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 3 (L3) (1024.00 MB/proc) taken in 15.04 sec. (Wt:0.00s, Wr:2.62s, Ps:12.42s) 
+FTI: Level 3 Checkpoint took: 15.044322 seconds!.
+FTI: Perform recovery of level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-01-15 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 3 with Ckpt. 3. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 3 Checkpoint took 9.074857 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-01-43 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 4 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 1.04 sec. (Pt:0.13s, Cl:0.91s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 4 (L4) (1024.00 MB/proc) taken in 118.73 sec. (Wt:0.00s, Wr:117.69s, Ps:1.04s) 
+FTI: Level 4 Checkpoint took: 118.727408 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+FTI: Recover from level 4.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-01-43 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 4 with Ckpt. 4. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Recovery from level 4 Checkpoint took: 3.607602 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+
+## FTI MPIIO - ITERATION 4 ##
+
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-03-53 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 0.22 sec. (Pt:0.22s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 1 (L1) (1024.00 MB/proc) taken in 3.10 sec. (Wt:0.00s, Wr:2.88s, Ps:0.22s) 
+FTI: Level 1 Checkpoint took: 3.105414 seconds!.
+FTI: Perform recovery of level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-03-53 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 1 with Ckpt. 1. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 1 Checkpoint took 4.184248 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-04-04 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 3.48 sec. (Pt:3.48s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 2 (L2) (1024.00 MB/proc) taken in 7.56 sec. (Wt:0.00s, Wr:4.08s, Ps:3.48s) 
+FTI: Level 2 Checkpoint took: 7.563431 seconds!.
+FTI: Perform recovery of level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-04-04 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 2 with Ckpt. 2. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 2 Checkpoint took 6.087740 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-04-22 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 12.39 sec. (Pt:12.39s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 3 (L3) (1024.00 MB/proc) taken in 14.86 sec. (Wt:0.00s, Wr:2.47s, Ps:12.39s) 
+FTI: Level 3 Checkpoint took: 14.862091 seconds!.
+FTI: Perform recovery of level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-04-22 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 3 with Ckpt. 3. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 3 Checkpoint took 7.418546 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-04-50 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 4 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 3.21 sec. (Pt:2.64s, Cl:0.58s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 4 (L4) (1024.00 MB/proc) taken in 277.62 sec. (Wt:0.00s, Wr:274.41s, Ps:3.21s) 
+FTI: Level 4 Checkpoint took: 277.627180 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+FTI: Recover from level 4.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-04-50 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 4 with Ckpt. 4. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Recovery from level 4 Checkpoint took: 377.634362 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+
+## FTI POSIX - ITERATION 5 ##
+
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-15-49 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 0.16 sec. (Pt:0.16s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 1 (L1) (1024.00 MB/proc) taken in 3.30 sec. (Wt:0.00s, Wr:3.14s, Ps:0.16s) 
+FTI: Level 1 Checkpoint took: 3.341751 seconds!.
+FTI: Perform recovery of level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-15-49 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 1 with Ckpt. 1. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 1 Checkpoint took 8.625400 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-16-08 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 4.97 sec. (Pt:4.97s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 2 (L2) (1024.00 MB/proc) taken in 9.66 sec. (Wt:0.00s, Wr:4.69s, Ps:4.97s) 
+FTI: Level 2 Checkpoint took: 9.714721 seconds!.
+FTI: Perform recovery of level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-16-08 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 2 with Ckpt. 2. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 2 Checkpoint took 12.397334 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-16-36 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 12.74 sec. (Pt:12.73s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 3 (L3) (1024.00 MB/proc) taken in 15.39 sec. (Wt:0.00s, Wr:2.65s, Ps:12.74s) 
+FTI: Level 3 Checkpoint took: 15.430335 seconds!.
+FTI: Perform recovery of level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-16-36 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 3 with Ckpt. 3. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 3 Checkpoint took 9.391527 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-17-06 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 4 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 1.43 sec. (Pt:0.15s, Cl:1.28s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 4 (L4) (1024.00 MB/proc) taken in 142.85 sec. (Wt:0.00s, Wr:141.42s, Ps:1.43s) 
+FTI: Level 4 Checkpoint took: 143.246262 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+FTI: Recover from level 4.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-17-06 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 4 with Ckpt. 4. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Recovery from level 4 Checkpoint took: 5.694155 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+
+## FTI MPIIO - ITERATION 5 ##
+
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-19-44 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 2.06 sec. (Pt:2.06s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 1 (L1) (1024.00 MB/proc) taken in 5.94 sec. (Wt:0.00s, Wr:3.88s, Ps:2.06s) 
+FTI: Level 1 Checkpoint took: 5.981221 seconds!.
+FTI: Perform recovery of level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-19-44 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 1 with Ckpt. 1. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 1 Checkpoint took 10.311982 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-20-05 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 3.50 sec. (Pt:3.50s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 2 (L2) (1024.00 MB/proc) taken in 6.54 sec. (Wt:0.00s, Wr:3.03s, Ps:3.50s) 
+FTI: Level 2 Checkpoint took: 6.571213 seconds!.
+FTI: Perform recovery of level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-20-05 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 2 with Ckpt. 2. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 2 Checkpoint took 9.187517 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-20-26 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 12.47 sec. (Pt:12.47s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 3 (L3) (1024.00 MB/proc) taken in 15.56 sec. (Wt:0.00s, Wr:3.09s, Ps:12.47s) 
+FTI: Level 3 Checkpoint took: 15.565621 seconds!.
+FTI: Perform recovery of level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-20-26 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 3 with Ckpt. 3. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 3 Checkpoint took 11.932776 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-20-58 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 4 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 0.76 sec. (Pt:0.12s, Cl:0.65s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 4 (L4) (1024.00 MB/proc) taken in 355.27 sec. (Wt:0.00s, Wr:354.51s, Ps:0.76s) 
+FTI: Level 4 Checkpoint took: 355.378552 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+FTI: Recover from level 4.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-20-58 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 4 with Ckpt. 4. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Recovery from level 4 Checkpoint took: 405.025882 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+
+## FTI POSIX - ITERATION 6 ##
+
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-33-44 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 0.24 sec. (Pt:0.24s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 1 (L1) (1024.00 MB/proc) taken in 3.57 sec. (Wt:0.00s, Wr:3.33s, Ps:0.24s) 
+FTI: Level 1 Checkpoint took: 3.574284 seconds!.
+FTI: Perform recovery of level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-33-44 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 1 with Ckpt. 1. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 1 Checkpoint took 5.812924 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-33-57 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 3.54 sec. (Pt:3.54s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 2 (L2) (1024.00 MB/proc) taken in 6.46 sec. (Wt:0.00s, Wr:2.92s, Ps:3.54s) 
+FTI: Level 2 Checkpoint took: 6.463926 seconds!.
+FTI: Perform recovery of level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-33-57 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 2 with Ckpt. 2. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 2 Checkpoint took 10.660162 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-34-19 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 12.66 sec. (Pt:12.66s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 3 (L3) (1024.00 MB/proc) taken in 15.64 sec. (Wt:0.00s, Wr:2.97s, Ps:12.66s) 
+FTI: Level 3 Checkpoint took: 15.636759 seconds!.
+FTI: Perform recovery of level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-34-19 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 3 with Ckpt. 3. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 3 Checkpoint took 9.682234 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-34-49 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 4 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 1.82 sec. (Pt:0.90s, Cl:0.92s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 4 (L4) (1024.00 MB/proc) taken in 157.69 sec. (Wt:0.00s, Wr:155.87s, Ps:1.82s) 
+FTI: Level 4 Checkpoint took: 157.691284 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+FTI: Recover from level 4.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-34-49 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 4 with Ckpt. 4. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Recovery from level 4 Checkpoint took: 6.304110 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+
+## FTI MPIIO - ITERATION 6 ##
+
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-37-42 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 0.05 sec. (Pt:0.05s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 1 (L1) (1024.00 MB/proc) taken in 3.46 sec. (Wt:0.00s, Wr:3.41s, Ps:0.05s) 
+FTI: Level 1 Checkpoint took: 3.463699 seconds!.
+FTI: Perform recovery of level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-37-42 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 1 with Ckpt. 1. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 1 Checkpoint took 9.560373 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-37-58 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 3.50 sec. (Pt:3.50s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 2 (L2) (1024.00 MB/proc) taken in 6.08 sec. (Wt:0.00s, Wr:2.58s, Ps:3.50s) 
+FTI: Level 2 Checkpoint took: 6.085942 seconds!.
+FTI: Perform recovery of level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-37-58 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 2 with Ckpt. 2. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 2 Checkpoint took 8.458480 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-38-18 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 16.09 sec. (Pt:16.09s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 3 (L3) (1024.00 MB/proc) taken in 18.56 sec. (Wt:0.00s, Wr:2.47s, Ps:16.09s) 
+FTI: Level 3 Checkpoint took: 18.669048 seconds!.
+FTI: Perform recovery of level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-38-18 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 3 with Ckpt. 3. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 3 Checkpoint took 9.535116 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-38-50 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 4 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 0.64 sec. (Pt:0.03s, Cl:0.61s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 4 (L4) (1024.00 MB/proc) taken in 336.52 sec. (Wt:0.00s, Wr:335.88s, Ps:0.64s) 
+FTI: Level 4 Checkpoint took: 336.629976 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+FTI: Recover from level 4.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-38-50 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 4 with Ckpt. 4. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Recovery from level 4 Checkpoint took: 127.265668 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+
+## FTI POSIX - ITERATION 7 ##
+
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-46-38 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 0.04 sec. (Pt:0.04s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 1 (L1) (1024.00 MB/proc) taken in 2.81 sec. (Wt:0.00s, Wr:2.77s, Ps:0.04s) 
+FTI: Level 1 Checkpoint took: 2.814294 seconds!.
+FTI: Perform recovery of level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-46-38 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 1 with Ckpt. 1. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 1 Checkpoint took 7.691794 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-46-52 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 3.68 sec. (Pt:3.65s, Cl:0.03s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 2 (L2) (1024.00 MB/proc) taken in 11.09 sec. (Wt:0.00s, Wr:7.41s, Ps:3.68s) 
+FTI: Level 2 Checkpoint took: 11.087624 seconds!.
+FTI: Perform recovery of level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-46-52 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 2 with Ckpt. 2. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 2 Checkpoint took 11.486443 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-47-19 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 12.42 sec. (Pt:12.38s, Cl:0.04s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 3 (L3) (1024.00 MB/proc) taken in 15.07 sec. (Wt:0.00s, Wr:2.64s, Ps:12.42s) 
+FTI: Level 3 Checkpoint took: 15.068430 seconds!.
+FTI: Perform recovery of level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-47-19 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 3 with Ckpt. 3. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 3 Checkpoint took 7.413575 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-47-46 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 4 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 1.08 sec. (Pt:0.20s, Cl:0.89s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 4 (L4) (1024.00 MB/proc) taken in 124.92 sec. (Wt:0.00s, Wr:123.84s, Ps:1.08s) 
+FTI: Level 4 Checkpoint took: 124.922757 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+FTI: Recover from level 4.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-47-46 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 4 with Ckpt. 4. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Recovery from level 4 Checkpoint took: 6.011828 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+
+## FTI MPIIO - ITERATION 7 ##
+
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-50-04 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 0.41 sec. (Pt:0.39s, Cl:0.02s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 1 (L1) (1024.00 MB/proc) taken in 3.27 sec. (Wt:0.00s, Wr:2.86s, Ps:0.41s) 
+FTI: Level 1 Checkpoint took: 3.275293 seconds!.
+FTI: Perform recovery of level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-50-04 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 1 with Ckpt. 1. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 1 Checkpoint took 5.626704 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-50-16 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 3.70 sec. (Pt:3.70s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 2 (L2) (1024.00 MB/proc) taken in 7.55 sec. (Wt:0.00s, Wr:3.84s, Ps:3.70s) 
+FTI: Level 2 Checkpoint took: 7.546293 seconds!.
+FTI: Perform recovery of level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-50-16 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 2 with Ckpt. 2. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 2 Checkpoint took 7.663377 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-50-37 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 12.55 sec. (Pt:12.55s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 3 (L3) (1024.00 MB/proc) taken in 15.29 sec. (Wt:0.00s, Wr:2.74s, Ps:12.55s) 
+FTI: Level 3 Checkpoint took: 15.295040 seconds!.
+FTI: Perform recovery of level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-50-37 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 3 with Ckpt. 3. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 3 Checkpoint took 7.869374 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-51-05 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 4 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 0.69 sec. (Pt:0.13s, Cl:0.56s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 4 (L4) (1024.00 MB/proc) taken in 353.04 sec. (Wt:0.00s, Wr:352.35s, Ps:0.69s) 
+FTI: Level 4 Checkpoint took: 353.040917 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+FTI: Recover from level 4.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-51-05 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 4 with Ckpt. 4. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Recovery from level 4 Checkpoint took: 54.823816 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+
+## FTI POSIX - ITERATION 8 ##
+
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-57-56 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 0.19 sec. (Pt:0.19s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 1 (L1) (1024.00 MB/proc) taken in 3.47 sec. (Wt:0.00s, Wr:3.28s, Ps:0.19s) 
+FTI: Level 1 Checkpoint took: 3.469072 seconds!.
+FTI: Perform recovery of level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-57-56 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 1 with Ckpt. 1. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 1 Checkpoint took 5.738396 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-58-08 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 4.68 sec. (Pt:4.68s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 2 (L2) (1024.00 MB/proc) taken in 7.29 sec. (Wt:0.00s, Wr:2.61s, Ps:4.68s) 
+FTI: Level 2 Checkpoint took: 7.295202 seconds!.
+FTI: Perform recovery of level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-58-08 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 2 with Ckpt. 2. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 2 Checkpoint took 9.432909 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-58-29 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 12.67 sec. (Pt:12.67s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 3 (L3) (1024.00 MB/proc) taken in 15.97 sec. (Wt:0.00s, Wr:3.29s, Ps:12.67s) 
+FTI: Level 3 Checkpoint took: 15.969509 seconds!.
+FTI: Perform recovery of level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-58-29 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 3 with Ckpt. 3. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 3 Checkpoint took 7.265925 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_21-58-57 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 4 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 1.14 sec. (Pt:0.12s, Cl:1.02s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 4 (L4) (1024.00 MB/proc) taken in 118.90 sec. (Wt:0.00s, Wr:117.76s, Ps:1.14s) 
+FTI: Level 4 Checkpoint took: 118.904843 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+FTI: Recover from level 4.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_21-58-57 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 4 with Ckpt. 4. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Recovery from level 4 Checkpoint took: 3.230171 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+
+## FTI MPIIO - ITERATION 8 ##
+
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_22-01-06 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 0.45 sec. (Pt:0.44s, Cl:0.01s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 1 (L1) (1024.00 MB/proc) taken in 3.10 sec. (Wt:0.00s, Wr:2.66s, Ps:0.45s) 
+FTI: Level 1 Checkpoint took: 3.101974 seconds!.
+FTI: Perform recovery of level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_22-01-06 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 1 with Ckpt. 1. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 1 Checkpoint took 4.303438 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_22-01-17 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 3.40 sec. (Pt:3.40s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 2 (L2) (1024.00 MB/proc) taken in 6.02 sec. (Wt:0.00s, Wr:2.62s, Ps:3.40s) 
+FTI: Level 2 Checkpoint took: 6.026297 seconds!.
+FTI: Perform recovery of level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_22-01-17 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 2 with Ckpt. 2. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 2 Checkpoint took 6.228671 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_22-01-34 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 12.27 sec. (Pt:12.27s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 3 (L3) (1024.00 MB/proc) taken in 14.96 sec. (Wt:0.00s, Wr:2.69s, Ps:12.27s) 
+FTI: Level 3 Checkpoint took: 14.964773 seconds!.
+FTI: Perform recovery of level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_22-01-34 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 3 with Ckpt. 3. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 3 Checkpoint took 12.312775 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_22-02-06 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 4 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 0.70 sec. (Pt:0.11s, Cl:0.59s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 4 (L4) (1024.00 MB/proc) taken in 393.63 sec. (Wt:0.00s, Wr:392.93s, Ps:0.70s) 
+FTI: Level 4 Checkpoint took: 393.628656 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+FTI: Recover from level 4.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_22-02-06 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 4 with Ckpt. 4. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Recovery from level 4 Checkpoint took: 67.794453 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+
+## FTI POSIX - ITERATION 9 ##
+
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_22-09-50 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 0.22 sec. (Pt:0.13s, Cl:0.09s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 1 (L1) (1024.00 MB/proc) taken in 2.90 sec. (Wt:0.00s, Wr:2.68s, Ps:0.22s) 
+FTI: Level 1 Checkpoint took: 2.902346 seconds!.
+FTI: Perform recovery of level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_22-09-50 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 1 with Ckpt. 1. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 1 Checkpoint took 8.655105 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_22-10-06 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 3.72 sec. (Pt:3.72s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 2 (L2) (1024.00 MB/proc) taken in 6.66 sec. (Wt:0.00s, Wr:2.94s, Ps:3.72s) 
+FTI: Level 2 Checkpoint took: 6.672190 seconds!.
+FTI: Perform recovery of level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_22-10-06 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 2 with Ckpt. 2. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 2 Checkpoint took 9.428541 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_22-10-26 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 12.95 sec. (Pt:12.95s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 3 (L3) (1024.00 MB/proc) taken in 15.56 sec. (Wt:0.00s, Wr:2.61s, Ps:12.95s) 
+FTI: Level 3 Checkpoint took: 15.557677 seconds!.
+FTI: Perform recovery of level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_22-10-26 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 3 with Ckpt. 3. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 3 Checkpoint took 6.174097 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_22-10-52 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 4 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 1.16 sec. (Pt:0.41s, Cl:0.75s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 4 (L4) (1024.00 MB/proc) taken in 116.33 sec. (Wt:0.00s, Wr:115.17s, Ps:1.16s) 
+FTI: Level 4 Checkpoint took: 116.332872 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+FTI: Recover from level 4.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_22-10-52 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 4 with Ckpt. 4. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Recovery from level 4 Checkpoint took: 3.494886 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+
+## FTI MPIIO - ITERATION 9 ##
+
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_22-13-00 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 0.48 sec. (Pt:0.48s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 1 (L1) (1024.00 MB/proc) taken in 3.23 sec. (Wt:0.00s, Wr:2.75s, Ps:0.48s) 
+FTI: Level 1 Checkpoint took: 3.231569 seconds!.
+FTI: Perform recovery of level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_22-13-00 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 1 with Ckpt. 1. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 1 Checkpoint took 4.635642 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_22-13-12 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 3.71 sec. (Pt:3.70s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 2 (L2) (1024.00 MB/proc) taken in 6.34 sec. (Wt:0.00s, Wr:2.63s, Ps:3.71s) 
+FTI: Level 2 Checkpoint took: 6.339788 seconds!.
+FTI: Perform recovery of level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_22-13-12 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 2 with Ckpt. 2. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 2 Checkpoint took 8.500310 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_22-13-31 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 12.28 sec. (Pt:12.28s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 3 (L3) (1024.00 MB/proc) taken in 14.99 sec. (Wt:0.00s, Wr:2.71s, Ps:12.28s) 
+FTI: Level 3 Checkpoint took: 14.988523 seconds!.
+FTI: Perform recovery of level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_22-13-31 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 3 with Ckpt. 3. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 3 Checkpoint took 6.468167 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_22-13-58 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 4 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 0.80 sec. (Pt:0.23s, Cl:0.56s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 4 (L4) (1024.00 MB/proc) taken in 365.82 sec. (Wt:0.00s, Wr:365.02s, Ps:0.80s) 
+FTI: Level 4 Checkpoint took: 365.819440 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+FTI: Recover from level 4.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_22-13-58 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 4 with Ckpt. 4. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Recovery from level 4 Checkpoint took: 26.410960 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+
+## FTI POSIX - ITERATION 10 ##
+
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_22-20-34 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 0.08 sec. (Pt:0.08s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 1 (L1) (1024.00 MB/proc) taken in 2.73 sec. (Wt:0.00s, Wr:2.65s, Ps:0.08s) 
+FTI: Level 1 Checkpoint took: 2.728406 seconds!.
+FTI: Perform recovery of level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_22-20-34 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 1 with Ckpt. 1. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 1 Checkpoint took 5.213524 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_22-20-46 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 3.81 sec. (Pt:3.81s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 2 (L2) (1024.00 MB/proc) taken in 6.25 sec. (Wt:0.00s, Wr:2.44s, Ps:3.81s) 
+FTI: Level 2 Checkpoint took: 6.256348 seconds!.
+FTI: Perform recovery of level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_22-20-46 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 2 with Ckpt. 2. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 2 Checkpoint took 6.301606 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_22-21-03 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 12.37 sec. (Pt:12.36s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 3 (L3) (1024.00 MB/proc) taken in 14.79 sec. (Wt:0.00s, Wr:2.42s, Ps:12.37s) 
+FTI: Level 3 Checkpoint took: 14.794132 seconds!.
+FTI: Perform recovery of level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_22-21-03 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 3 with Ckpt. 3. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 3 Checkpoint took 6.140508 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_22-21-29 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 4 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 0.93 sec. (Pt:0.13s, Cl:0.79s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 4 (L4) (1024.00 MB/proc) taken in 115.76 sec. (Wt:0.00s, Wr:114.83s, Ps:0.93s) 
+FTI: Level 4 Checkpoint took: 115.759087 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+FTI: Recover from level 4.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_22-21-29 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is POSIX 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 4 with Ckpt. 4. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Recovery from level 4 Checkpoint took: 3.603042 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+
+## FTI MPIIO - ITERATION 10 ##
+
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_22-23-36 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 0.33 sec. (Pt:0.32s, Cl:0.01s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 1 (L1) (1024.00 MB/proc) taken in 2.95 sec. (Wt:0.00s, Wr:2.62s, Ps:0.33s) 
+FTI: Level 1 Checkpoint took: 2.951751 seconds!.
+FTI: Perform recovery of level 1 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_22-23-36 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 1 with Ckpt. 1. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 1 Checkpoint took 4.337886 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_22-23-47 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 3.68 sec. (Pt:3.68s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 2 (L2) (1024.00 MB/proc) taken in 6.38 sec. (Wt:0.00s, Wr:2.70s, Ps:3.68s) 
+FTI: Level 2 Checkpoint took: 6.381708 seconds!.
+FTI: Perform recovery of level 2 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_22-23-47 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 2 with Ckpt. 2. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 2 Checkpoint took 6.769959 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_22-24-05 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 12.29 sec. (Pt:12.29s, Cl:0.00s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 3 (L3) (1024.00 MB/proc) taken in 15.05 sec. (Wt:0.00s, Wr:2.76s, Ps:12.29s) 
+FTI: Level 3 Checkpoint took: 15.054342 seconds!.
+FTI: Perform recovery of level 3 Checkpoint.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_22-24-05 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 3 with Ckpt. 3. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: recovery of level 3 Checkpoint took 6.126199 s
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : The execution ID is: 2017-10-30_22-24-31 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Perform level 4 Checkpoint.
+[ [32mFTI  Information[0m ] : Post-checkpoint took 0.68 sec. (Pt:0.11s, Cl:0.56s) 
+[ [32mFTI  Information[0m ] : Ckpt. ID 4 (L4) (1024.00 MB/proc) taken in 417.41 sec. (Wt:0.00s, Wr:416.74s, Ps:0.68s) 
+FTI: Level 4 Checkpoint took: 417.423870 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+FTI: Recover from level 4.
+[ [32mFTI  Information[0m ] : Reading FTI configuration file (fti.ini)... 
+[ [32mFTI  Information[0m ] : This is a restart. The execution ID is: 2017-10-30_22-24-31 
+[ [32mFTI  Information[0m ] : Selected Ckpt I/O is MPI-I/O 
+[ [32mFTI  Information[0m ] : Recovering successfully from level 4 with Ckpt. 4. 
+[ [32mFTI  Information[0m ] : FTI has been initialized. 
+[ [32mFTI  Information[0m ] : Variable ID 0 to protect. Current ckpt. size per rank is 1024.00MB. 
+FTI: Recovery from level 4 Checkpoint took: 24.646912 seconds!.
+[ [32mFTI  Information[0m ] : FTI has been finalized. 
+
+#######################
+##   RESULTS         ##
+#######################
+
+Number of processes: 9600
+Allocated memory per process: 
+1073741824 B | 1024.000000 MB | 1.000000 GB
+Allocated memory in total: 
+10307921510400 B | 9830400.000000 MB | 9600.000000 GB
+
+=========================================
+FTI - POSIX
+-----------------------------------------
+ L1 Write = 3.245611 s (dT = 0.306523 s) 
+ L1 Read  = 5.999527 s (dT = 1.616336 s) 
+ L2 Write = 7.286579 s (dT = 1.613597 s) 
+ L2 Read  = 8.850410 s (dT = 2.059417 s) 
+ L3 Write = 15.356164 s (dT = 0.378987 s) 
+ L3 Read  = 7.729988 s (dT = 1.339269 s) 
+ L4 Write = 127.086753 s (dT = 13.012907 s) 
+ L4 Read  = 4.195330 s (dT = 1.200646 s) 
+=========================================
+
+=========================================
+FTI - MPI-I/O
+-----------------------------------------
+ L1 Write = 3.421106 s (dT = 0.868899 s) 
+ L1 Read  = 5.999527 s (dT = 2.150238 s) 
+ L2 Write = 6.799113 s (dT = 0.813517 s) 
+ L2 Read  = 8.850410 s (dT = 1.137616 s) 
+ L3 Write = 15.969111 s (dT = 1.571240 s) 
+ L3 Read  = 7.729988 s (dT = 2.236958 s) 
+ L4 Write = 365.187971 s (dT = 47.186863 s) 
+ L4 Read  = 118.230508 s (dT = 139.890381 s) 
+=========================================
+
+=========================================
+Pure MPI-I/O
+-----------------------------------------
+ Write    = 362.327090 s (dT = 56.280822 s)
+ Read     = 21.189381 s (dT = 1.911111 s)
+=========================================
+
+=========================================
+Pure POSIX
+-----------------------------------------
+ Write    = 124.214380 s (dT = 4.000231 s)
+ Read     = 0.639556 s (dT = 0.061303 s)
+=========================================
+
