@@ -2,7 +2,7 @@
  *  @file   FTIBM.c
  *  @author Kai Keller (kellekai@gmx.de)
  *  @date   October, 2017
- *  @brief  Main file of I/O-Benchmark for FTI library.
+ *  @brief  Main file of I/O-Benchmark for FTI checkpoint/restart library.
  */
 
 #include "include/FTIBM_decl.h"
