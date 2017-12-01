@@ -366,23 +366,28 @@ int main(int argc, char *argv[]) {
 /* DO CHECKPOINT FOR ALL LEVELS AND DO RESTART FROM LEVEL 4 */
 
     dictionary *ini;
-    int POSIXFlag, MPIIOFlag, keepFlag;
+    int POSIXFlag, MPIIOFlag, FTIFFFlag, keepFlag;
     
-    for(i=0; i<(8*NUM_ITER); i++) {
+    for(i=0; i<(12*NUM_ITER); i++) {
         
-        if(rank == 0 && (i%8 == 0) ) {
-            printf("\n## FTI POSIX - ITERATION %i ##\n\n",i/8+1);
+        if(rank == 0 && (i%12 == 0) ) {
+            printf("\n## FTI POSIX - ITERATION %i ##\n\n",i/12+1);
         }
 
-        if(rank == 0 && (i%8 == 4) ) {
-            printf("\n## FTI MPIIO - ITERATION %i ##\n\n",i/8+1);
+        if(rank == 0 && (i%12 == 4) ) {
+            printf("\n## FTI MPIIO - ITERATION %i ##\n\n",i/12+1);
+        }
+
+        if(rank == 0 && (i%12 == 8) ) {
+            printf("\n## FTI FTIFF - ITERATION %i ##\n\n",i/12+1);
         }
 
         // if level 4, keep last checkpoint
         keepFlag = ((i%4+1) == 4);
-        POSIXFlag = (i%8 == 0);
-        MPIIOFlag = (i%8 == 4);
-        if (rank == 0 && ( keepFlag || POSIXFlag || MPIIOFlag )) {
+        POSIXFlag = (i%12 == 0);
+        MPIIOFlag = (i%12 == 4);
+        FTIFFFlag = (i%12 == 8);
+        if (rank == 0 && ( keepFlag || POSIXFlag || MPIIOFlag || FTIFFFlag)) {
             ini = iniparser_load(config_file);
             if (ini == NULL) {
                 printf("[ERROR] can't open configuration file.\n");
@@ -397,6 +402,9 @@ int main(int argc, char *argv[]) {
             }
             if (MPIIOFlag) {
             iniparser_set(ini, "Basic:ckpt_io", "2");
+            }
+            if (FTIFFFlag) {
+            iniparser_set(ini, "Basic:ckpt_io", "3");
             }
             iniparser_dump_ini(ini, fd);
             fclose(fd);
@@ -483,10 +491,10 @@ int main(int argc, char *argv[]) {
     
     if (rank == 0) {
         // compute mean and sigma of measured times
-        memset(dTFtiReadMean,0,8*sizeof(double));
-        memset(dTFtiWriteMean,0,8*sizeof(double));
-        memset(dTFtiReadSigma,0,8*sizeof(double));
-        memset(dTFtiWriteSigma,0,8*sizeof(double));
+        memset(dTFtiReadMean,0,12*sizeof(double));
+        memset(dTFtiWriteMean,0,12*sizeof(double));
+        memset(dTFtiReadSigma,0,12*sizeof(double));
+        memset(dTFtiWriteSigma,0,12*sizeof(double));
         dTPosixReadMean=0;
         dTPosixWriteMean=0;
         dTPosixReadSigma=0;
@@ -523,20 +531,20 @@ int main(int argc, char *argv[]) {
         
         // FTI
         // mean
-        for(i=0; i<8*NUM_ITER; i++) {
-            dTFtiReadMean[i%8] += dTFtiRead[i];
-            dTFtiWriteMean[i%8] += dTFtiWrite[i];
+        for(i=0; i<12*NUM_ITER; i++) {
+            dTFtiReadMean[i%12] += dTFtiRead[i];
+            dTFtiWriteMean[i%12] += dTFtiWrite[i];
         }
-        for(i=0; i<8; i++) {
+        for(i=0; i<12; i++) {
             dTFtiReadMean[i] /= NUM_ITER;
             dTFtiWriteMean[i] /= NUM_ITER;
         }
         // sigma
-        for(i=0; i<8*NUM_ITER; i++) {
-            dTFtiReadSigma[i%8] += pow(dTFtiRead[i]-dTFtiReadMean[i%8],2);        
-            dTFtiWriteSigma[i%8] += pow(dTFtiWrite[i]-dTFtiWriteMean[i%8],2);        
+        for(i=0; i<12*NUM_ITER; i++) {
+            dTFtiReadSigma[i%12] += pow(dTFtiRead[i]-dTFtiReadMean[i%12],2);        
+            dTFtiWriteSigma[i%12] += pow(dTFtiWrite[i]-dTFtiWriteMean[i%12],2);        
         }
-        for(i=0; i<8; i++) {
+        for(i=0; i<12; i++) {
             dTFtiReadSigma[i] = sqrt(dTFtiReadSigma[i]/NUM_ITER);
             dTFtiWriteSigma[i] = sqrt(dTFtiWriteSigma[i]/NUM_ITER);
         }
@@ -565,6 +573,19 @@ int main(int argc, char *argv[]) {
                "\n"
                "=========================================\n"
                "FTI - MPI-I/O\n"
+               "-----------------------------------------\n"
+               " L1 Write = %lf s (dT = %lf s) \n"
+               " L1 Read  = %lf s (dT = %lf s) \n"
+               " L2 Write = %lf s (dT = %lf s) \n"
+               " L2 Read  = %lf s (dT = %lf s) \n"
+               " L3 Write = %lf s (dT = %lf s) \n"
+               " L3 Read  = %lf s (dT = %lf s) \n"
+               " L4 Write = %lf s (dT = %lf s) \n"
+               " L4 Read  = %lf s (dT = %lf s) \n"
+               "=========================================\n"
+               "\n"
+               "=========================================\n"
+               "FTI - FTIFF\n"
                "-----------------------------------------\n"
                " L1 Write = %lf s (dT = %lf s) \n"
                " L1 Read  = %lf s (dT = %lf s) \n"
@@ -606,13 +627,21 @@ int main(int argc, char *argv[]) {
                dTFtiWriteMean[3],dTFtiWriteSigma[3],
                dTFtiReadMean[3],dTFtiReadSigma[3],
                dTFtiWriteMean[4],dTFtiWriteSigma[4],
-               dTFtiReadMean[0],dTFtiReadSigma[4],
+               dTFtiReadMean[4],dTFtiReadSigma[4],
                dTFtiWriteMean[5],dTFtiWriteSigma[5],
-               dTFtiReadMean[1],dTFtiReadSigma[5],
+               dTFtiReadMean[4],dTFtiReadSigma[5],
                dTFtiWriteMean[6],dTFtiWriteSigma[6],
-               dTFtiReadMean[2],dTFtiReadSigma[6],
+               dTFtiReadMean[4],dTFtiReadSigma[6],
                dTFtiWriteMean[7],dTFtiWriteSigma[7],
                dTFtiReadMean[7],dTFtiReadSigma[7],
+               dTFtiWriteMean[8],dTFtiWriteSigma[8],
+               dTFtiReadMean[8],dTFtiReadSigma[8],
+               dTFtiWriteMean[9],dTFtiWriteSigma[9],
+               dTFtiReadMean[9],dTFtiReadSigma[9],
+               dTFtiWriteMean[10],dTFtiWriteSigma[10],
+               dTFtiReadMean[10],dTFtiReadSigma[10],
+               dTFtiWriteMean[11],dTFtiWriteSigma[11],
+               dTFtiReadMean[11],dTFtiReadSigma[11],
                dTMpiWriteMean,dTMpiWriteSigma, 
                dTMpiReadMean,dTMpiReadSigma,
                dTPosixWriteMean,dTPosixWriteSigma, 

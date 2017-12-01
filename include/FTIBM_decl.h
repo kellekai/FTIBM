@@ -44,9 +44,9 @@ double dTPosixWriteMean, dTPosixWriteSigma;
 double dTMpiReadMean, dTMpiReadSigma;
 double dTMpiWriteMean, dTMpiWriteSigma;
 double dTPosixRead[100], dTPosixWrite[100], dTMpiRead[100], dTMpiWrite[100]; 
-double dTFtiRead[800], dTFtiWrite[800]; // max 100 iterations
-double dTFtiReadMean[8], dTFtiWriteMean[8];
-double dTFtiReadSigma[8], dTFtiWriteSigma[8];
+double dTFtiRead[1200], dTFtiWrite[1200]; // max 100 iterations
+double dTFtiReadMean[12], dTFtiWriteMean[12];
+double dTFtiReadSigma[12], dTFtiWriteSigma[12];
 char *arr;
 FILE *fd;
 char tmpdir[10];
